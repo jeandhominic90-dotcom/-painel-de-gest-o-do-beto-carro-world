@@ -1,5 +1,4 @@
 let produtos = [];
-
 let meuGraficoRosca = null;
 let meuGraficoBarras = null;
 
@@ -10,8 +9,7 @@ const totalVendasEl = document.getElementById('total-vendas');
 const qtd_visitas = document.getElementById('qtd-visitas');
 const qtd_nao_visitantes = document.getElementById('qtd-nao-visitantes');
 
-formProduto.addEventListener('submit', function(e) {
-    e.preventDefault();
+function cadastrar_produtos(){
 
     const nome = document.getElementById('nome-produto').value;
     const descricao = document.getElementById('descricao-produto').value;
@@ -26,8 +24,12 @@ formProduto.addEventListener('submit', function(e) {
     atualizarResumo();
     atualizarGraficosDinamicos();
 
-    formProduto.reset();
-});
+   
+    console.log(produtos)
+    localStorage.setItem('produtos', JSON.stringify(produtos))
+}
+
+
 
 function atualizarTabela() {
     tabelaCorpo.innerHTML = '';
@@ -60,10 +62,10 @@ function atualizarResumo() {
     totalProdutosCadastrados.innerHTML = `<strong>Total de produtos:</strong> ${totalQtd}`;
     totalVendasEl.innerHTML = `<strong>Total vendido:</strong> R$ ${totalValor.toFixed(2).replace('.', ',')}`;
     
-    // Declarado corretamente para evitar o erro
+    
     const capacidadeMaxima = 1000; 
-    const totalVisitas = totalQtd; // Começa em 0 e vai somando com o estoque/cadastros
-    const totalNaoVisitantes = Math.max(0, capacidadeMaxima - totalVisitas);
+    const totalVisitas = totalQtd; 
+    const totalNaoVisitantes = Math.max(0 , capacidadeMaxima - totalVisitas);
 
     if (qtd_visitas) qtd_visitas.innerHTML = `<strong>Total de visitas:</strong> ${totalVisitas}`;
     if (qtd_nao_visitantes) qtd_nao_visitantes.innerHTML = `<strong>Total não visitados:</strong> ${totalNaoVisitantes}`;
@@ -100,7 +102,7 @@ function atualizarGraficosDinamicos() {
     const labelsCategorias = ['Radicais', 'Família', 'Comida', 'Personagens', 'Zoológico', 'Museu'];
     const coresCategorias = ['#e74c3c', '#3498db', '#f1c40f', '#9b59b6', '#2ecc71', '#f36608'];
 
-    // Atualiza os números da legenda customizada no HTML (se existirem)
+    
     const elRadical = document.getElementById('num-radical');
     const elFamilia = document.getElementById('num-familia');
     const elComida = document.getElementById('num-comida');
@@ -115,7 +117,7 @@ function atualizarGraficosDinamicos() {
     if (elZoologico) elZoologico.innerText = dadosCategorias[4];
     if (elMuseu) elMuseu.innerText = dadosCategorias[5];
 
-    // 1. Gráfico de Rosca (Donut)
+    
     if (meuGraficoRosca) {
         meuGraficoRosca.data.datasets[0].data = dadosCategorias;
         meuGraficoRosca.update();
@@ -142,7 +144,7 @@ function atualizarGraficosDinamicos() {
         }
     }
 
-    // 2. Gráfico de Barras (Bar)
+  
     if (meuGraficoBarras) {
         meuGraficoBarras.data.datasets[0].data = dadosCategorias;
         meuGraficoBarras.update();
