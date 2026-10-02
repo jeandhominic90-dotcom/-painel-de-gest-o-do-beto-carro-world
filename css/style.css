@@ -133,6 +133,31 @@ header h1{
     background-color: #c0392b;
 }
 
+.btn-setor {
+    background-color: #2980b9;
+    color: #fff;
+    border: 2px solid #111;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.btn-setor:hover{
+    background-color: #1f618d;
+}
+
+td.acoes {
+    white-space: nowrap;
+}
+
+td.acoes button + button {
+    margin-left: 6px;
+}
+
 .summary-content p{
     font-size: 0.9rem;
     margin-bottom: 8px;
@@ -204,4 +229,23 @@ table th {
     .top-row, .bottom-row {
         grid-template-columns: 1fr;
     }
+}
+.resultado-setor:empty {
+    display: none;
+}
+
+.resultado-setor {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.resultado-setor.ok {
+    background: #e8f8ee;
+    border: 1px solid #2ecc71;
+}
+
+.resultado-setor.erro {
+    background: #fdecea;
+    border: 1px solid #e74c3c;
 }

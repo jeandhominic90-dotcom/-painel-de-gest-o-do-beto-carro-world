@@ -66,6 +66,9 @@
                     <div class="form-group">
                         <input type="text" id="codigo-produto" placeholder="Código do produto" required>
                     </div>
+                    <div class="form-group">
+                        <input type="text" id="cliente-codigo-produto" placeholder="Código de barras do cliente comprador" required>
+                    </div>
 
                     <div class="form-group">
                         <select id="categoria-produto" required class="input-select"
@@ -95,6 +98,14 @@
                     <p id="total-vendas"><strong>Total vendido:</strong> R$ 0,00</p>
                     <p id="qtd-visitas"><strong>Total de visitas:</strong> 0</p>
                     <p id="qtd-nao-visitantes"><strong>Total não visitados:</strong> 0</p>
+                    <hr>
+                    <p><strong>Visitantes por setor:</strong></p>
+                    <p><span class="dot museu"></span> Museu: <strong id="visitas-museu">0</strong></p>
+                    <p><span class="dot radical"></span> Radicais: <strong id="visitas-radical">0</strong></p>
+                    <p><span class="dot zoologico"></span> Zoológico: <strong id="visitas-zoologico">0</strong></p>
+                    <p><span class="dot comida"></span> Comida: <strong id="visitas-comida">0</strong></p>
+                    <p><span class="dot personagens"></span> Personagens: <strong id="visitas-personagens">0</strong></p>
+                    <p><span class="dot familia"></span> Família: <strong id="visitas-familia">0</strong></p>
                 </div>
             </section>
         </div>
