@@ -19,7 +19,7 @@ function cadastrar_cliente(){
     console.log(clientes)
     localStorage.setItem('clientes', JSON.stringify(clientes))
 
-    // Já deixa o próximo ingresso vinculado ao cliente recém-cadastrado
+  
     document.getElementById('cliente-codigo-produto').value = novasClientes.codigo_barra
     atualizarResumo()
 }
