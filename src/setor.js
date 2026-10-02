@@ -1,5 +1,4 @@
-// Lógica compartilhada pelas páginas de setores (radicais, museu, zoologico, comida, personagens, familia).
-// Cada página informa seu setor em <body data-setor="...">, usando as mesmas chaves das categorias de produto.
+
 
 const nomesSetores = {
     radical: 'Radicais',
