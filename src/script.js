@@ -9,7 +9,7 @@ const paginasSetores = {
     familia: 'familia.html'
 };
 
-// Gera um código de barras EAN-13 aleatório (prefixo 789 = Brasil) com dígito verificador
+
 function gerarCodigoBarras() {
     let codigo = '789';
     for (let i = 0; i < 9; i++) {
