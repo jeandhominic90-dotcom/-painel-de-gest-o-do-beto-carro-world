@@ -1,6 +1,3 @@
-Aqui está o seu README.md atualizado e adaptado à estrutura real do seu repositório mostrada na imagem (incluindo as novas páginas de atrações/categorias e a organização de arquivos):
-
-Markdown
 # 🎢 Painel de Gestão - Beto Carrero World
 
 Sistema web interativo desenvolvido para a gestão administrativa, controle de estoque, fluxo de vendas e monitoramento de visitantes das atrações do Beto Carrero World, o maior parque temático da América Latina.
