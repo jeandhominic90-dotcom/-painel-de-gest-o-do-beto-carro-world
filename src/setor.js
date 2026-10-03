@@ -17,8 +17,7 @@ function lerLista(chave) {
     }
 }
 
-// Encontra o cliente dono do ingresso: pelo vínculo gravado no cadastro do produto
-// ou, em ingressos antigos sem vínculo, pelo "Código do produto" igual ao código do cliente
+
 function buscarCompradorDoIngresso(ingresso, clientes) {
     const codigos = [ingresso.clienteCodigoBarra, ingresso.codigo]
         .filter(Boolean)
@@ -33,7 +32,7 @@ function buscarNoSetor(codigo, setor) {
 
     const cliente = clientes.find(c => String(c.codigo_barra) === codigo);
 
-    // O código pode ser o do ingresso (produto) ou o do cliente vinculado ao ingresso
+
     const ingressos = produtos.filter(p =>
         String(p.codigoBarras) === codigo ||
         String(p.clienteCodigoBarra || '') === codigo ||
