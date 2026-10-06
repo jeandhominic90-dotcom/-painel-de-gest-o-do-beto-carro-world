@@ -36,7 +36,7 @@
                     </div>
                     <label for="input-codigo-barra">Codigo barra</label>
                     <div class="form-group">
-                        <input type="text" id="input-codigo-barra" placeholder="digite o codigode barra">
+                        <input type="text" id="input-codigo-barra" placeholder="vazio = gerado automaticamente">
                     </div>
                     <label for="input-data">Data</label>
                     <div class="form-group">
@@ -44,6 +44,8 @@
                     </div>
 
                     <button onclick="cadastrar_cliente()" class="btn-black">Cadastrar clientes</button>
+                    <button onclick="excluir_cliente()" class="btn-black btn-excluir-usuario">Excluir usuário</button>
+                    <p id="mensagem-cliente" class="mensagem-cliente"></p>
                 </div>
             </section>
 

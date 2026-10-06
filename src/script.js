@@ -43,7 +43,6 @@ function cadastrar_produtos(){
     const categoria = document.getElementById('categoria-produto').value;
 
     if (!categoria) {
-        alert('Selecione a categoria (setor) do parque.');
         return;
     }
 
@@ -51,11 +50,9 @@ function cadastrar_produtos(){
     const clienteCodigoBarra = document.getElementById('cliente-codigo-produto').value.trim();
     const listaClientes = (typeof clientes !== 'undefined') ? clientes : [];
     if (!clienteCodigoBarra) {
-        alert('Informe o código de barras do cliente comprador.');
         return;
     }
     if (!listaClientes.some(c => String(c.codigo_barra) === clienteCodigoBarra)) {
-        alert('Nenhum cliente cadastrado com esse código de barras.');
         return;
     }
 
@@ -98,8 +95,6 @@ function abrirSetor(categoria) {
     const pagina = paginasSetores[categoria];
     if (pagina) {
         window.location.href = pagina;
-    } else {
-        alert('Este produto não possui um setor válido.');
     }
 }
 
