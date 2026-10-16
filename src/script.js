@@ -1,7 +1,7 @@
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
 const paginasSetores = {
-    museu: 'progeto.html',
+    museu: 'museu.html',
     radical: 'radicais.html',
     zoologico: 'zoologico.html',
     comida: 'comida.html',
@@ -46,7 +46,7 @@ function cadastrar_produtos(){
         return;
     }
 
-    // Vincula o ingresso ao cliente comprador para que o setor saiba quem tem acesso
+   
     const clienteCodigoBarra = document.getElementById('cliente-codigo-produto').value.trim();
     const listaClientes = (typeof clientes !== 'undefined') ? clientes : [];
     if (!clienteCodigoBarra) {
@@ -75,6 +75,7 @@ function atualizarTabela() {
     tabelaCorpo.innerHTML = '';
     
     produtos.forEach((prod, index) => {
+        console.log(prod)
         const linha = document.createElement('tr');
         linha.innerHTML = `
             <td>${prod.nome}</td>
@@ -114,9 +115,9 @@ function atualizarResumo() {
     totalVendasEl.innerHTML = `<strong>Total vendido:</strong> R$ ${totalValor.toFixed(2).replace('.', ',')}`;
     
     
-    // Cada cadastro conta +1 visita no setor escolhido
+   
     const totalVisitas = produtos.length;
-    // Clientes cadastrados que ainda não têm visita registrada (começa em 0)
+   
     const totalClientes = (typeof clientes !== 'undefined') ? clientes.length : 0;
     const totalNaoVisitantes = Math.max(0, totalClientes - totalVisitas);
 

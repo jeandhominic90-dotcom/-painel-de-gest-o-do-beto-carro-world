@@ -25,7 +25,7 @@ function buscarCompradorDoIngresso(ingresso, clientes) {
     return clientes.find(c => codigos.includes(String(c.codigo_barra)));
 }
 
-// Busca o código no setor e devolve apenas dados públicos (nunca senha ou CPF)
+
 function buscarNoSetor(codigo, setor) {
     const produtos = lerLista('produtos');
     const clientes = lerLista('clientes');
@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const campo = document.getElementById('codigo-barra');
     const resultado = document.getElementById('resultado-setor');
 
-    // Leitores de código de barras digitam o código e enviam "Enter", o que dispara o submit
+    
     form.addEventListener('submit', (evento) => {
         evento.preventDefault();
         const codigo = campo.value.trim();
