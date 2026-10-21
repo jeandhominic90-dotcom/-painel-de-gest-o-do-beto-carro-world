@@ -12,7 +12,6 @@ function cadastrar_cliente(){
     const campoNome = document.getElementById('input-nome');
     const campoSenha = document.getElementById('input-senha');
     const campoCpf = document.getElementById('input-cpf');
-    const campoCodigoBarra = document.getElementById('input-codigo-barra');
     const campoData = document.getElementById('input-data');
 
     const nome = campoNome.value.trim();
@@ -32,15 +31,12 @@ function cadastrar_cliente(){
     const codigoExiste = codigo => clientes.some(c => String(c.codigo_barra) === codigo);
 
     // Código de barras é opcional: se vazio, gera um aleatório que ainda não esteja em uso
-    let codigo_barra = campoCodigoBarra.value.trim();
+    let codigo_barra;
     if (!codigo_barra) {
         do {
             codigo_barra = gerarCodigoBarras();
         } while (codigoExiste(codigo_barra));
-    } else if (codigoExiste(codigo_barra)) {
-        mostrarMensagemCliente('Já existe um cliente com esse código de barras.', true);
-        return;
-    }
+    } 
 
     const novoCliente = {
         id: Date.now(),
@@ -60,7 +56,7 @@ function cadastrar_cliente(){
     campoCpf.value = ''
     campoData.value = ''
    
-    campoCodigoBarra.value = ''
+    
 
     document.getElementById('cliente-codigo-produto').value = novoCliente.codigo_barra
     mostrarMensagemCliente(`Cliente ${nome} cadastrado. Código de barras: ${codigo_barra}`, false)

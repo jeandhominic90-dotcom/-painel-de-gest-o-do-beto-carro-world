@@ -47,19 +47,14 @@ function cadastrar_produtos(){
     }
 
    
-    const clienteCodigoBarra = document.getElementById('cliente-codigo-produto').value.trim();
+    
     const listaClientes = (typeof clientes !== 'undefined') ? clientes : [];
-    if (!clienteCodigoBarra) {
-        return;
-    }
-    if (!listaClientes.some(c => String(c.codigo_barra) === clienteCodigoBarra)) {
-        return;
-    }
+    
+   
 
     const codigoBarras = gerarCodigoBarras();
 
-    produtos.push({ nome, descricao, preco, estoque, codigo, categoria, codigoBarras, clienteCodigoBarra });
-
+    produtos.push({ nome, descricao, preco, estoque, codigo, categoria, codigoBarras})
     atualizarTabela();
     atualizarResumo();
     atualizarGraficosDinamicos();
