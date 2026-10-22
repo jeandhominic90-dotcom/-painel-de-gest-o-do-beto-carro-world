@@ -58,7 +58,7 @@ function cadastrar_cliente(){
    
     
 
-    document.getElementById('cliente-codigo-produto').value = novoCliente.codigo_barra
+    // document.getElementById('cliente-codigo-produto').value = novoCliente.codigo_barra
     mostrarMensagemCliente(`Cliente ${nome} cadastrado. Código de barras: ${codigo_barra}`, false)
     atualizarResumo()
 }

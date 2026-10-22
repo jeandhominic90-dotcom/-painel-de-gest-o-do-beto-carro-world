@@ -18,7 +18,7 @@ function lerLista(chave) {
 }
 
 
-function buscarCompradorDoIngresso(ingresso, clientes) {
+function buscar_Comprador_Do_Ingresso(ingresso, clientes) {
     const codigos = [ingresso.clienteCodigoBarra, ingresso.codigo]
         .filter(Boolean)
         .map(String);
@@ -51,7 +51,7 @@ function buscarNoSetor(codigo, setor) {
         return { status: 'nao-encontrado' };
     }
 
-    const comprador = cliente || buscarCompradorDoIngresso(ingressoDoSetor, clientes);
+    const comprador = cliente || buscar_Comprador_Do_Ingresso(ingressoDoSetor, clientes);
 
     if (!comprador) {
         return { status: 'sem-cliente', produto: ingressoDoSetor.nome };
@@ -120,3 +120,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     campo.focus();
 });
+
+let produtos = JSON.parse(localStorage.getItem('produtos'))
+
+console.log(produtos);
+ 
+for(let i = 0 ; i<produtos.length; i++){
+document.getElementById('categoria-produto').innerHTML += `
+ <option value="${produtos[i].codigo}">${produtos[i].nome}</option>
+`
+}

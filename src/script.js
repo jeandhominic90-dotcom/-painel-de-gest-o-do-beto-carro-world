@@ -39,7 +39,7 @@ function cadastrar_produtos(){
     const descricao = document.getElementById('descricao-produto').value;
     const preco = parseFloat(document.getElementById('preco-produto').value);
     const estoque = parseInt(document.getElementById('estoque-produto').value);
-    const codigo = document.getElementById('codigo-produto').value;
+    const codigo = gerarCodigoBarras();
     const categoria = document.getElementById('categoria-produto').value;
 
     if (!categoria) {
@@ -52,9 +52,8 @@ function cadastrar_produtos(){
     
    
 
-    const codigoBarras = gerarCodigoBarras();
-
-    produtos.push({ nome, descricao, preco, estoque, codigo, categoria, codigoBarras})
+    
+    produtos.push({ nome, descricao, preco, estoque, codigo, categoria, })
     atualizarTabela();
     atualizarResumo();
     atualizarGraficosDinamicos();
@@ -80,18 +79,15 @@ function atualizarTabela() {
             <td>${prod.codigo}<br><small>${prod.codigoBarras || ''}</small></td>
             <td class="acoes">
                 <button class="btn-excluir" onclick="removerProduto(${index})">Excluir</button>
-                <button class="btn-setor" onclick="abrirSetor('${prod.categoria}')">Ver setor</button>
+                <button class="btn-setor" onclick="abrirSetor()">abrir setor</button>
             </td>
         `;
         tabelaCorpo.appendChild(linha);
     });
 }
 
-function abrirSetor(categoria) {
-    const pagina = paginasSetores[categoria];
-    if (pagina) {
-        window.location.href = pagina;
-    }
+function abrirSetor() {
+        window.location.href = "setores.html";
 }
 
 function removerProduto(index) {

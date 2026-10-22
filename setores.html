@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comida</title>
+    <title>Zoológico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-setor="comida">
+<body data-setor="zoologico">
 
     <header>
-        <h1>Setor Comida</h1>
+        <h1>Setor</h1>
     </header>
 
     <main class="main-layout">
@@ -19,7 +19,8 @@
             <h2>Leitura de código de barras</h2>
             <form id="form-codigo-barra">
                 <div class="form-group">
-                    <input type="text" inputmode="numeric" id="codigo-barra" placeholder="digite ou escaneie o código de barras" autocomplete="off">
+                    <input type="text" inputmode="numeric" id="codigo-barra"
+                        placeholder="digite ou escaneie o código de barras" autocomplete="off">
                 </div>
                 <button type="submit" class="btn-black">Buscar</button>
             </form>
@@ -27,6 +28,14 @@
             <a href="index.html" class="btn-black btn-voltar">Voltar ao painel</a>
         </section>
     </main>
+
+    <div class="form-group" >
+        <select id="categoria-produto" required class="input-select"
+            style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 6px; font-size: 0.9rem; background: #fff;">
+            <option value="" disabled selected>Selecione a Atrações</option>
+            
+    </select>
+    </div>
 
     <script src="./src/setor.js"></script>
 </body>
