@@ -17,13 +17,13 @@
     <main class="main-layout">
         <section class="card">
             <h2>Leitura de código de barras</h2>
-            <form id="form-codigo-barra">
+            <div id="form-codigo-barra">
                 <div class="form-group">
                     <input type="text" inputmode="numeric" id="codigo-barra"
                         placeholder="digite ou escaneie o código de barras" autocomplete="off">
                 </div>
-                <button type="submit" class="btn-black">Buscar</button>
-            </form>
+                <button onclick="buscar_cliente()" class="btn-black">Buscar</button>
+            </div>
             <div id="resultado-setor" class="resultado-setor"></div>
             <a href="index.html" class="btn-black btn-voltar">Voltar ao painel</a>
         </section>

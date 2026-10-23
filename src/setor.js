@@ -26,43 +26,7 @@ function buscar_Comprador_Do_Ingresso(ingresso, clientes) {
 }
 
 
-function buscarNoSetor(codigo, setor) {
-    const produtos = lerLista('produtos');
-    const clientes = lerLista('clientes');
 
-    const cliente = clientes.find(c => String(c.codigo_barra) === codigo);
-
-
-    const ingressos = produtos.filter(p =>
-        String(p.codigoBarras) === codigo ||
-        String(p.clienteCodigoBarra || '') === codigo ||
-        (cliente && !p.clienteCodigoBarra && String(p.codigo) === codigo)
-    );
-    const ingressoDoSetor = ingressos.find(p => p.categoria === setor);
-
-    if (!ingressoDoSetor) {
-        if (ingressos.length > 0) {
-            const outros = [...new Set(ingressos.map(p => nomesSetores[p.categoria] || p.categoria))];
-            return { status: 'outro-setor', setores: outros };
-        }
-        if (cliente) {
-            return { status: 'sem-acesso', nome: cliente.nome };
-        }
-        return { status: 'nao-encontrado' };
-    }
-
-    const comprador = cliente || buscar_Comprador_Do_Ingresso(ingressoDoSetor, clientes);
-
-    if (!comprador) {
-        return { status: 'sem-cliente', produto: ingressoDoSetor.nome };
-    }
-
-    return {
-        status: 'ok',
-        nome: comprador.nome,
-        produto: ingressoDoSetor.nome
-    };
-}
 
 function mostrarResultado(elemento, resultado, setor) {
     const nomeSetor = nomesSetores[setor];
@@ -101,25 +65,55 @@ function mostrarResultado(elemento, resultado, setor) {
     elemento.append(titulo, detalhe);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const setor = document.body.dataset.setor;
-    const form = document.getElementById('form-codigo-barra');
-    const campo = document.getElementById('codigo-barra');
-    const resultado = document.getElementById('resultado-setor');
-
+function buscar_cliente(){
+    let clientes = JSON.parse(localStorage.getItem('clientes'))
+    let codigo = document.getElementById('codigo-barra').value
+    let cliente = null
+    let codigo_setor = document.getElementById('categoria-produto').value
+    if(codigo_setor == ""){
+        alert('selecione o setor primero')
+    return
+    }
     
-    form.addEventListener('submit', (evento) => {
-        evento.preventDefault();
-        const codigo = campo.value.trim();
-        if (!codigo) return;
 
-        mostrarResultado(resultado, buscarNoSetor(codigo, setor), setor);
-        campo.value = '';
-        campo.focus();
-    });
 
-    campo.focus();
-});
+    for(let i = 0 ; i<clientes.length; i++){
+        if(clientes[i].codigo_barra == codigo){
+            cliente=clientes[i]
+        }
+    }
+
+    if(cliente != null){
+    document.getElementById('resultado-setor').innerHTML=`
+    <p>${cliente.nome}</p>
+    <p>${cliente.codigo_barra}</p>
+     <button onclick="registrar_ingreso(${cliente.codigo_barra}, ${codigo_setor})" class="btn-black">registar</button>
+    `
+    }else{
+        alert('cliente nao existe')
+    }
+
+
+}
+
+function registrar_ingreso(cliente_codigo, codigo_setor){
+console.log(cliente_codigo);
+console.log(codigo_setor);
+
+let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
+let ingreso = {
+    cliente : cliente_codigo, 
+    setor : codigo_setor,
+    data: new Date(),
+    id : codigo_setor + '' + cliente_codigo + "" + Date.now(),
+}
+
+ingressos.push(ingreso)
+
+localStorage.setItem('ingressos', JSON.stringify(ingressos))
+
+
+}
 
 let produtos = JSON.parse(localStorage.getItem('produtos'))
 
