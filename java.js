@@ -1,14 +1,23 @@
 let clientes = JSON.parse(localStorage.getItem('clientes')) || []
 
 
-function mostrarMensagemCliente(texto, erro){
+function mostrarMensagemCliente(texto, erro) {
     const mensagem = document.getElementById('mensagem-cliente');
     if (!mensagem) return;
     mensagem.textContent = texto;
     mensagem.className = 'mensagem-cliente' + (erro ? ' erro' : ' ok');
 }
 
-function cadastrar_cliente(){
+function abrir_modal_usuario(){
+document.getElementById('modal-usuario').showModal()
+}
+
+function abrir_modal_produtos(){
+    document.getElementById('modal-produtos').showModal()
+    }
+
+
+function cadastrar_cliente() {
     const campoNome = document.getElementById('input-nome');
     const campoSenha = document.getElementById('input-senha');
     const campoCpf = document.getElementById('input-cpf');
@@ -30,13 +39,13 @@ function cadastrar_cliente(){
 
     const codigoExiste = codigo => clientes.some(c => String(c.codigo_barra) === codigo);
 
-    // Código de barras é opcional: se vazio, gera um aleatório que ainda não esteja em uso
+
     let codigo_barra;
     if (!codigo_barra) {
         do {
             codigo_barra = gerarCodigoBarras();
         } while (codigoExiste(codigo_barra));
-    } 
+    }
 
     const novoCliente = {
         id: Date.now(),
@@ -55,16 +64,16 @@ function cadastrar_cliente(){
     campoSenha.value = ''
     campoCpf.value = ''
     campoData.value = ''
-   
-    
 
-    // document.getElementById('cliente-codigo-produto').value = novoCliente.codigo_barra
+
+
+
     mostrarMensagemCliente(`Cliente ${nome} cadastrado. Código de barras: ${codigo_barra}`, false)
     atualizarResumo()
 }
 
 
-function excluir_cliente(){
+function excluir_cliente() {
     const campoCodigoBarra = document.getElementById('input-codigo-barra');
     const codigo = campoCodigoBarra.value.trim();
 

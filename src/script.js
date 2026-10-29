@@ -1,13 +1,6 @@
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
-const paginasSetores = {
-    museu: 'museu.html',
-    radical: 'radicais.html',
-    zoologico: 'zoologico.html',
-    comida: 'comida.html',
-    personagens: 'personagens.html',
-    familia: 'familia.html'
-};
+
 
 
 function gerarCodigoBarras() {
@@ -33,7 +26,7 @@ const totalVendasEl = document.getElementById('total-vendas');
 const qtd_visitas = document.getElementById('qtd-visitas');
 const qtd_nao_visitantes = document.getElementById('qtd-nao-visitantes');
 
-function cadastrar_produtos(){
+function cadastrar_produtos() {
 
     const nome = document.getElementById('nome-produto').value;
     const descricao = document.getElementById('descricao-produto').value;
@@ -46,19 +39,19 @@ function cadastrar_produtos(){
         return;
     }
 
-   
-    
-    const listaClientes = (typeof clientes !== 'undefined') ? clientes : [];
-    
-   
 
-    
+
+    const listaClientes = (typeof clientes !== 'undefined') ? clientes : [];
+
+
+
+
     produtos.push({ nome, descricao, preco, estoque, codigo, categoria, })
     atualizarTabela();
     atualizarResumo();
     atualizarGraficosDinamicos();
 
-   
+
     console.log(produtos)
     localStorage.setItem('produtos', JSON.stringify(produtos))
 }
@@ -67,7 +60,7 @@ function cadastrar_produtos(){
 
 function atualizarTabela() {
     tabelaCorpo.innerHTML = '';
-    
+
     produtos.forEach((prod, index) => {
         console.log(prod)
         const linha = document.createElement('tr');
@@ -87,7 +80,7 @@ function atualizarTabela() {
 }
 
 function abrirSetor() {
-        window.location.href = "setores.html";
+    window.location.href = "setores.html";
 }
 
 function removerProduto(index) {
@@ -104,11 +97,11 @@ function atualizarResumo() {
 
     totalProdutosCadastrados.innerHTML = `<strong>Total de produtos:</strong> ${totalQtd}`;
     totalVendasEl.innerHTML = `<strong>Total vendido:</strong> R$ ${totalValor.toFixed(2).replace('.', ',')}`;
-    
-    
-   
+
+
+
     const totalVisitas = produtos.length;
-   
+
     const totalClientes = (typeof clientes !== 'undefined') ? clientes.length : 0;
     const totalNaoVisitantes = Math.max(0, totalClientes - totalVisitas);
 
@@ -123,7 +116,7 @@ function calcularTotaisPorCategoria() {
         comida: 0,
         personagens: 0,
         zoologico: 0,
-        museu: 0 
+        museu: 0
     };
 
     produtos.forEach(prod => {
@@ -147,7 +140,7 @@ function atualizarGraficosDinamicos() {
     const labelsCategorias = ['Radicais', 'Família', 'Comida', 'Personagens', 'Zoológico', 'Museu'];
     const coresCategorias = ['#e74c3c', '#3498db', '#f1c40f', '#9b59b6', '#2ecc71', '#f36608'];
 
-    
+
     const elRadical = document.getElementById('num-radical');
     const elFamilia = document.getElementById('num-familia');
     const elComida = document.getElementById('num-comida');
@@ -162,14 +155,14 @@ function atualizarGraficosDinamicos() {
     if (elZoologico) elZoologico.innerText = dadosCategorias[4];
     if (elMuseu) elMuseu.innerText = dadosCategorias[5];
 
-    
+
     const idsSetores = ['radical', 'familia', 'comida', 'personagens', 'zoologico', 'museu'];
     idsSetores.forEach((id, i) => {
         const el = document.getElementById('visitas-' + id);
         if (el) el.innerText = dadosCategorias[i];
     });
 
-    
+
     if (meuGraficoRosca) {
         meuGraficoRosca.data.datasets[0].data = dadosCategorias;
         meuGraficoRosca.update();
@@ -196,7 +189,7 @@ function atualizarGraficosDinamicos() {
         }
     }
 
-  
+
     if (meuGraficoBarras) {
         meuGraficoBarras.data.datasets[0].data = dadosCategorias;
         meuGraficoBarras.update();

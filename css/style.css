@@ -12,6 +12,16 @@
     font-family: Arial, sans-serif;
 }
 
+dialog{
+    position: fixed;
+    inset: 0;
+    margin: auto;
+}
+
+dialog::backdrop{
+    background-color: #f1c40f95;
+}
+
 body{
  
     background-color: #FFD700;
@@ -38,6 +48,44 @@ header h1{
     padding-bottom: 0;
     text-shadow: 2px 2px 0 #111;
 }
+
+.open-modal{
+    background-color: #1f618d;
+    color: #ffe;
+    padding: 15px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 5px;
+    transition: background 0.2s;
+    border: 2px solid #111;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.open-modal:hover{
+    background-color: #4ca0d8;
+}
+
+.abrir_modal{
+    background-color: #0e146b;
+    color: #ffe;
+    padding: 15px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 5px;
+    transition: background 0.2s;
+    border: 2px solid #111;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.abrir_modal:hover{
+    background-color: #85bde2;
+}
+
+
 
 .main-layout{
     display: flex;
@@ -68,6 +116,10 @@ header h1{
     box-shadow: 5px 5px 0 #111; 
 }
 
+/* #card-usuario, #card-produto{
+    display: none;
+} */
+
 .card h2{
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -80,6 +132,7 @@ header h1{
 .form-group{
     margin-bottom: 12px;
 }
+
 
 .form-group input, .form-group select{
     width: 100%;

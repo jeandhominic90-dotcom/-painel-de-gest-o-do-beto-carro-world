@@ -65,52 +65,52 @@ function mostrarResultado(elemento, resultado, setor) {
     elemento.append(titulo, detalhe);
 }
 
-function buscar_cliente(){
+function buscar_cliente() {
     let clientes = JSON.parse(localStorage.getItem('clientes'))
     let codigo = document.getElementById('codigo-barra').value
     let cliente = null
     let codigo_setor = document.getElementById('categoria-produto').value
-    if(codigo_setor == ""){
+    if (codigo_setor == "") {
         alert('selecione o setor primero')
-    return
+        return
     }
-    
 
 
-    for(let i = 0 ; i<clientes.length; i++){
-        if(clientes[i].codigo_barra == codigo){
-            cliente=clientes[i]
+
+    for (let i = 0; i < clientes.length; i++) {
+        if (clientes[i].codigo_barra == codigo) {
+            cliente = clientes[i]
         }
     }
 
-    if(cliente != null){
-    document.getElementById('resultado-setor').innerHTML=`
+    if (cliente != null) {
+        document.getElementById('resultado-setor').innerHTML = `
     <p>${cliente.nome}</p>
     <p>${cliente.codigo_barra}</p>
      <button onclick="registrar_ingreso(${cliente.codigo_barra}, ${codigo_setor})" class="btn-black">registar</button>
     `
-    }else{
+    } else {
         alert('cliente nao existe')
     }
 
 
 }
 
-function registrar_ingreso(cliente_codigo, codigo_setor){
-console.log(cliente_codigo);
-console.log(codigo_setor);
+function registrar_ingreso(cliente_codigo, codigo_setor) {
+    console.log(cliente_codigo);
+    console.log(codigo_setor);
 
-let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
-let ingreso = {
-    cliente : cliente_codigo, 
-    setor : codigo_setor,
-    data: new Date(),
-    id : codigo_setor + '' + cliente_codigo + "" + Date.now(),
-}
+    let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
+    let ingreso = {
+        cliente: cliente_codigo,
+        setor: codigo_setor,
+        data: new Date(),
+        id: codigo_setor + '' + cliente_codigo + "" + Date.now(),
+    }
 
-ingressos.push(ingreso)
+    ingressos.push(ingreso)
 
-localStorage.setItem('ingressos', JSON.stringify(ingressos))
+    localStorage.setItem('ingressos', JSON.stringify(ingressos))
 
 
 }
@@ -118,9 +118,9 @@ localStorage.setItem('ingressos', JSON.stringify(ingressos))
 let produtos = JSON.parse(localStorage.getItem('produtos'))
 
 console.log(produtos);
- 
-for(let i = 0 ; i<produtos.length; i++){
-document.getElementById('categoria-produto').innerHTML += `
+
+for (let i = 0; i < produtos.length; i++) {
+    document.getElementById('categoria-produto').innerHTML += `
  <option value="${produtos[i].codigo}">${produtos[i].nome}</option>
 `
 }

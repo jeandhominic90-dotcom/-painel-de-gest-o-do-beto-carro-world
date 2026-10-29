@@ -18,8 +18,12 @@
     <main class="main-layout">
 
         <div class="top-row">
-
+    <button  class="open-modal"  onclick="abrir_modal_usuario()">+ usuario</button>
+    <button  class="abrir_modal"    onclick="abrir_modal_produtos()">+ produtos</button>
+        <dialog id="modal-usuario">
             <section class="card">
+                <button onclick= "document.getElementById('modal-usuario').close()">X</button>
+                
                 <h2>Cadastro de usuário</h2>
                 <div id="form-usuario">
                     <div class="form-group">
@@ -45,9 +49,13 @@
                     <p id="mensagem-cliente" class="mensagem-cliente"></p>
                 </div>
             </section>
-
+        </dialog>
+            
+        
+        <dialog id="modal-produtos">
 
             <section class="card">
+                <button onclick="document.getElementById('modal-produtos').close()">X</button>
                 <h2>Cadastro de produtos</h2>
                 <div id="form-produto">
                     <div class="form-group">
@@ -66,7 +74,7 @@
                         <label for="input-nome">estoque </label>
                         <input type="number" id="estoque-produto" placeholder="Quantidade em estoque" required>
                     </div>
-                   
+
 
                     <div class="form-group">
                         <select id="categoria-produto" required class="input-select"
@@ -83,6 +91,7 @@
                     <button onclick="cadastrar_produtos()" class="btn-black">Cadastrar Produto</button>
                 </div>
             </section>
+        </dialog>
 
 
             <section class="card">
@@ -102,7 +111,8 @@
                     <p><span class="dot radical"></span> Radicais: <strong id="visitas-radical">0</strong></p>
                     <p><span class="dot zoologico"></span> Zoológico: <strong id="visitas-zoologico">0</strong></p>
                     <p><span class="dot comida"></span> Comida: <strong id="visitas-comida">0</strong></p>
-                    <p><span class="dot personagens"></span> Personagens: <strong id="visitas-personagens">0</strong></p>
+                    <p><span class="dot personagens"></span> Personagens: <strong id="visitas-personagens">0</strong>
+                    </p>
                     <p><span class="dot familia"></span> Família: <strong id="visitas-familia">0</strong></p>
                 </div>
             </section>
