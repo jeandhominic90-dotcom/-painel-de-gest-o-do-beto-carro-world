@@ -69,9 +69,9 @@ function buscar_cliente() {
     let clientes = JSON.parse(localStorage.getItem('clientes'))
     let codigo = document.getElementById('codigo-barra').value
     let cliente = null
-    let codigo_setor = document.getElementById('categoria-produto').value
-    if (codigo_setor == "") {
-        alert('selecione o setor primero')
+    let codigo_produto = document.getElementById('categoria-produto').value
+    if (codigo_produto == "") {
+        alert('selecione o produto primero')
         return
     }
 
@@ -87,7 +87,7 @@ function buscar_cliente() {
         document.getElementById('resultado-setor').innerHTML = `
     <p>${cliente.nome}</p>
     <p>${cliente.codigo_barra}</p>
-     <button onclick="registrar_ingreso(${cliente.codigo_barra}, ${codigo_setor})" class="btn-black">registar</button>
+     <button onclick="registrar_ingreso(${cliente.codigo_barra}, ${codigo_produto} )" class="btn-black">registar</button>
     `
     } else {
         alert('cliente nao existe')
@@ -96,19 +96,21 @@ function buscar_cliente() {
 
 }
 
-function registrar_ingreso(cliente_codigo, codigo_setor) {
+function registrar_ingreso(cliente_codigo, codigo_produto) {
     console.log(cliente_codigo);
-    console.log(codigo_setor);
+    console.log(codigo_produto);
 
     let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
     let ingreso = {
         cliente: cliente_codigo,
-        setor: codigo_setor,
+        produto: codigo_produto,
         data: new Date(),
         id: codigo_setor + '' + cliente_codigo + "" + Date.now(),
     }
 
     ingressos.push(ingreso)
+    console.log(ingreso.data);
+    
 
     localStorage.setItem('ingressos', JSON.stringify(ingressos))
 

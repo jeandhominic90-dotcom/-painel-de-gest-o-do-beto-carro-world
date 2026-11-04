@@ -16,82 +16,17 @@
     </header>
 
     <main class="main-layout">
+        <nav class="nav_btn">
+            <button class="open-modal" onclick="abrir_modal_usuario()"> 
+                <img src="andrsrxn--user-plus.svg" alt="">
+                </button>
+            <button class="abrir_modal" onclick="abrir_modal_produtos()">
+                <img src="maki--amusement-park.svg" alt="">
+                </button>
+        </nav>
 
         <div class="top-row">
-    <button  class="open-modal"  onclick="abrir_modal_usuario()">+ usuario</button>
-    <button  class="abrir_modal"    onclick="abrir_modal_produtos()">+ produtos</button>
-        <dialog id="modal-usuario">
-            <section class="card">
-                <button onclick= "document.getElementById('modal-usuario').close()">X</button>
-                
-                <h2>Cadastro de usuário</h2>
-                <div id="form-usuario">
-                    <div class="form-group">
-                        <label for="input-nome">Nome</label>
-                        <input type="text" id="input-nome" placeholder="nome completo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-senha">Senha</label>
-                        <input type="password" id="input-senha" placeholder="insira sua senha" required>
-                    </div>
-                    <label for="input-cpf">Cpf</label>
-                    <div class="form-group">
-                        <input type="text" id="input-cpf" placeholder="000.000.000-00" required>
-                    </div>
 
-                    <label for="input-data">Data</label>
-                    <div class="form-group">
-                        <input type="date" id="input-data" required>
-                    </div>
-
-                    <button onclick="cadastrar_cliente()" class="btn-black">Cadastrar clientes</button>
-                    <button onclick="excluir_cliente()" class="btn-black btn-excluir-usuario">Excluir usuário</button>
-                    <p id="mensagem-cliente" class="mensagem-cliente"></p>
-                </div>
-            </section>
-        </dialog>
-            
-        
-        <dialog id="modal-produtos">
-
-            <section class="card">
-                <button onclick="document.getElementById('modal-produtos').close()">X</button>
-                <h2>Cadastro de produtos</h2>
-                <div id="form-produto">
-                    <div class="form-group">
-                        <label for="input-nome">Nome do produto</label>
-                        <input type="text" id="nome-produto" placeholder="Nome do produto ou bilhete" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-nome">decrição </label>
-                        <input type="text" id="descricao-produto" placeholder="Descrição ou peso" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-nome">preço</label>
-                        <input type="number" step="0.01" id="preco-produto" placeholder="Preço unitário" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-nome">estoque </label>
-                        <input type="number" id="estoque-produto" placeholder="Quantidade em estoque" required>
-                    </div>
-
-
-                    <div class="form-group">
-                        <select id="categoria-produto" required class="input-select"
-                            style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 6px; font-size: 0.9rem; background: #fff;">
-                            <option value="" disabled selected>Selecione a Categoria do Parque</option>
-                            <option value="radical">Radicais</option>
-                            <option value="familia">Família</option>
-                            <option value="comida">Comida</option>
-                            <option value="personagens">Personagens</option>
-                            <option value="zoologico">Zoológico</option>
-                            <option value="museu">Museu</option>
-                        </select>
-                    </div>
-                    <button onclick="cadastrar_produtos()" class="btn-black">Cadastrar Produto</button>
-                </div>
-            </section>
-        </dialog>
 
 
             <section class="card">
@@ -177,6 +112,81 @@
                 </div>
             </section>
         </div>
+
+        
+        <dialog id="modal-usuario">
+            <section class="card">
+                <button class="close_X" onclick="document.getElementById('modal-usuario').close()">X</button>
+
+                <h2>Cadastro de usuário</h2>
+                <div id="form-usuario">
+                    <div class="form-group">
+                        <label for="input-nome">Nome</label>
+                        <input type="text" id="input-nome" placeholder="nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-senha">Senha</label>
+                        <input type="password" id="input-senha" placeholder="insira sua senha" required>
+                    </div>
+                    <label for="input-cpf">Cpf</label>
+                    <div class="form-group">
+                        <input type="text" id="input-cpf" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <label for="input-data">Data</label>
+                    <div class="form-group">
+                        <input type="date" id="input-data" required>
+                    </div>
+
+                    <button onclick="cadastrar_cliente()" class="btn-black">Cadastrar clientes</button>
+                    <button onclick="excluir_cliente()" class="btn-black btn-excluir-usuario">Excluir
+                        usuário</button>
+                    <p id="mensagem-cliente" class="mensagem-cliente"></p>
+                </div>
+            </section>
+        </dialog>
+
+
+        <dialog id="modal-produtos">
+
+            <section class="card">
+                <button class="fechar_X" onclick="document.getElementById('modal-produtos').close()">X</button>
+                <h2>Cadastro de produtos</h2>
+                <div id="form-produto">
+                    <div class="form-group">
+                        <label for="input-nome">Nome do produto</label>
+                        <input type="text" id="nome-produto" placeholder="Nome do produto ou bilhete" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-nome">decrição </label>
+                        <input type="text" id="descricao-produto" placeholder="Descrição ou peso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-nome">preço</label>
+                        <input type="number" step="0.01" id="preco-produto" placeholder="Preço unitário" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-nome">estoque </label>
+                        <input type="number" id="estoque-produto" placeholder="Quantidade em estoque" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <select id="categoria-produto" required class="input-select"
+                            style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 6px; font-size: 0.9rem; background: #fff;">
+                            <option value="" disabled selected>Selecione a Categoria do Parque</option>
+                            <option value="radical">Radicais</option>
+                            <option value="familia">Família</option>
+                            <option value="comida">Comida</option>
+                            <option value="personagens">Personagens</option>
+                            <option value="zoologico">Zoológico</option>
+                            <option value="museu">Museu</option>
+                        </select>
+                    </div>
+                    <button onclick="cadastrar_produtos()" class="btn-black">Cadastrar Produto</button>
+                </div>
+            </section>
+        </dialog>
     </main>
 
     <script src="./src/script.js"></script>
