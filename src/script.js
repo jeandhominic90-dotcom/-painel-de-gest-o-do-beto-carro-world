@@ -30,8 +30,6 @@ function cadastrar_produtos() {
 
     const nome = document.getElementById('nome-produto').value;
     const descricao = document.getElementById('descricao-produto').value;
-    const preco = parseFloat(document.getElementById('preco-produto').value);
-    const estoque = parseInt(document.getElementById('estoque-produto').value);
     const codigo = gerarCodigoBarras();
     const categoria = document.getElementById('categoria-produto').value;
 
@@ -46,7 +44,7 @@ function cadastrar_produtos() {
 
 
 
-    produtos.push({ nome, descricao, preco, estoque, codigo, categoria, })
+    produtos.push({ nome, descricao, codigo, categoria, })
     atualizarTabela();
     atualizarResumo();
     atualizarGraficosDinamicos();
@@ -67,8 +65,6 @@ function atualizarTabela() {
         linha.innerHTML = `
             <td>${prod.nome}</td>
             <td>${prod.descricao}</td>
-            <td>R$ ${prod.preco.toFixed(2).replace('.', ',')}</td>
-            <td>${prod.estoque}</td>
             <td>${prod.codigo}<br><small>${prod.codigoBarras || ''}</small></td>
             <td class="acoes">
                 <button class="btn-excluir" onclick="removerProduto(${index})">Excluir</button>
@@ -87,27 +83,21 @@ function removerProduto(index) {
     produtos.splice(index, 1);
     localStorage.setItem('produtos', JSON.stringify(produtos));
     atualizarTabela();
-    atualizarResumo();
+    // atualizarResumo();
     atualizarGraficosDinamicos();
 }
 
-function atualizarResumo() {
-    const totalQtd = produtos.reduce((acc, prod) => acc + prod.estoque, 0);
-    const totalValor = produtos.reduce((acc, prod) => acc + (prod.preco * prod.estoque), 0);
-
-    totalProdutosCadastrados.innerHTML = `<strong>Total de produtos:</strong> ${totalQtd}`;
-    totalVendasEl.innerHTML = `<strong>Total vendido:</strong> R$ ${totalValor.toFixed(2).replace('.', ',')}`;
+// function atualizarResumo() {
+    
+    
 
 
 
-    const totalVisitas = produtos.length;
+    
 
-    const totalClientes = (typeof clientes !== 'undefined') ? clientes.length : 0;
-    const totalNaoVisitantes = Math.max(0, totalClientes - totalVisitas);
-
-    if (qtd_visitas) qtd_visitas.innerHTML = `<strong>Total de visitas:</strong> ${totalVisitas}`;
-    if (qtd_nao_visitantes) qtd_nao_visitantes.innerHTML = `<strong>Total não visitados:</strong> ${totalNaoVisitantes}`;
-}
+//     if (qtd_visitas) qtd_visitas.innerHTML = `<strong>Total de visitas:</strong> ${totalVisitas}`;
+   
+// }
 
 function calcularTotaisPorCategoria() {
     let totais = {
@@ -226,6 +216,16 @@ function atualizarGraficosDinamicos() {
 
 window.addEventListener('DOMContentLoaded', () => {
     atualizarTabela();
-    atualizarResumo();
+    // atualizarResumo();
     atualizarGraficosDinamicos();
 });
+
+function atualizar_card(){
+let ingressos = JSON.parse(localStorage.getItem('ingressos'))
+let produtos = JSON.parse(localStorage.getItem('produtos'))
+let clientes = JSON.parse(localStorage.getItem('clientes'))
+
+document.getElementById ('qtd-ingressos').innerHTML = ingressos.length
+document.getElementById ('qtd-produtos').innerHTML = produtos.length
+document.getElementById ('qtd-visitas').innerHTML = clientes.length
+}

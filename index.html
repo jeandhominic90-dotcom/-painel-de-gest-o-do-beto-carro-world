@@ -33,13 +33,10 @@
                 <h2>Total de produtos</h2>
                 <div class="summary-content">
                     <p><strong>Valores de Referência:</strong></p>
-                    <p>Passaporte 1 Dia: R$ 119,90 a R$ 179,90</p>
-                    <p>Passaporte 2 Dias: R$ 218,90</p>
+                    <p>Passaporte 1 Dia: R$ 119,90 </p>
                     <p><em>Condições especiais aplicadas (Aniversariantes / SC)</em></p>
                     <p id="total-produtos-cadastrados"><strong>Total de produtos:</strong> 0</p>
                     <p id="total-vendas"><strong>Total vendido:</strong> R$ 0,00</p>
-                    <p id="qtd-visitas"><strong>Total de visitas:</strong> 0</p>
-                    <p id="qtd-nao-visitantes"><strong>Total não visitados:</strong> 0</p>
                     <hr>
                     <p><strong>Visitantes por setor:</strong></p>
                     <p><span class="dot museu"></span> Museu: <strong id="visitas-museu">0</strong></p>
@@ -53,6 +50,26 @@
             </section>
         </div>
 
+        <section class="card">
+            <h2>total_ingressos</h2>
+            <p class="title-visita">Total de ingressos:</p>
+            <p id="qtd-ingressos">0</p>
+
+        </section>
+
+        <section class="card">
+            <h2>total_produtos</h2>
+            <p class="title-visita">Total de produtos:</p>
+            <p id="qtd-produtos">0</p>
+        </section>
+
+        <section class="card">
+            <h2>total_pessoas</h2>
+            <p class="title-visita">Total de visitas:</p>
+            <p id="qtd-visitas">0</p>
+        </section>
+
+
 
         <div class="bottom-row">
             <section class="card table-card">
@@ -62,8 +79,6 @@
                         <tr>
                             <th>Nome do Produto</th>
                             <th>Descrição / Peso</th>
-                            <th>Preço Unitário (R$)</th>
-                            <th>Quantidade</th>
                             <th>Código</th>
                             <th>Ações</th>
                         </tr>
@@ -97,7 +112,7 @@
                 </div>
 
                 <div class="chart-legend-custom">
-                    <span class="legend-item"><span class="dot radical"></span> Radicais: <strong
+                    <span class="legend-item">0<span class="dot radical"></span> Radicais: <strong
                             id="num-radical">0</strong></span>
                     <span class="legend-item"><span class="dot familia"></span> Família: <strong
                             id="num-familia">0</strong></span>
@@ -161,14 +176,9 @@
                         <label for="input-nome">decrição </label>
                         <input type="text" id="descricao-produto" placeholder="Descrição ou peso" required>
                     </div>
-                    <div class="form-group">
-                        <label for="input-nome">preço</label>
-                        <input type="number" step="0.01" id="preco-produto" placeholder="Preço unitário" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-nome">estoque </label>
-                        <input type="number" id="estoque-produto" placeholder="Quantidade em estoque" required>
-                    </div>
+                   
+            
+                    
 
 
                     <div class="form-group">
