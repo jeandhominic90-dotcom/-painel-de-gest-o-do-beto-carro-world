@@ -46,7 +46,7 @@ function cadastrar_produtos() {
 
     produtos.push({ nome, descricao, codigo, categoria, })
     atualizarTabela();
-    atualizarResumo();
+    // atualizarResumo();
     atualizarGraficosDinamicos();
 
 
@@ -65,17 +65,18 @@ function atualizarTabela() {
         linha.innerHTML = `
             <td>${prod.nome}</td>
             <td>${prod.descricao}</td>
-            <td>${prod.codigo}<br><small>${prod.codigoBarras || ''}</small></td>
+            <td>${prod.codigo}<br></td>
             <td class="acoes">
                 <button class="btn-excluir" onclick="removerProduto(${index})">Excluir</button>
-                <button class="btn-setor" onclick="abrirSetor()">abrir setor</button>
+                <button class="btn-setor" onclick="abrirSetor(${prod.codigo})">abrir setor</button>
             </td>
         `;
         tabelaCorpo.appendChild(linha);
     });
 }
 
-function abrirSetor() {
+function abrirSetor(codigo) {
+    localStorage.setItem('setor_aberto', codigo)
     window.location.href = "setores.html";
 }
 
@@ -229,3 +230,9 @@ document.getElementById ('qtd-ingressos').innerHTML = ingressos.length
 document.getElementById ('qtd-produtos').innerHTML = produtos.length
 document.getElementById ('qtd-visitas').innerHTML = clientes.length
 }
+
+atualizar_card()
+atualizar_card()
+atualizar_card()
+atualizar_card()
+atualizar_card()

@@ -105,7 +105,7 @@ function registrar_ingreso(cliente_codigo, codigo_produto) {
         cliente: cliente_codigo,
         produto: codigo_produto,
         data: new Date(),
-        id: codigo_setor + '' + cliente_codigo + "" + Date.now(),
+        id: codigo_produto + '' + cliente_codigo + "" + Date.now(),
     }
 
     ingressos.push(ingreso)
@@ -114,7 +114,8 @@ function registrar_ingreso(cliente_codigo, codigo_produto) {
 
     localStorage.setItem('ingressos', JSON.stringify(ingressos))
 
-
+document.getElementById('codigo-barra').value = ""
+document.getElementById('resultado-setor').innerHTML = `<p>ingresso cadastrado com suseso</p>`
 }
 
 let produtos = JSON.parse(localStorage.getItem('produtos'))
@@ -126,3 +127,18 @@ for (let i = 0; i < produtos.length; i++) {
  <option value="${produtos[i].codigo}">${produtos[i].nome}</option>
 `
 }
+
+function iniciar_setor(){
+  let  codigo_setor = localStorage.getItem('setor_aberto')
+  document.getElementById('categoria-produto').value = codigo_setor
+  
+  for(let i = 0 ; produtos.length; i++){
+      if(produtos[i].codigo == codigo_setor){
+        document.getElementById('title-setor').innerHTML += produtos[i].nome
+
+    }
+  }
+}
+
+
+iniciar_setor()

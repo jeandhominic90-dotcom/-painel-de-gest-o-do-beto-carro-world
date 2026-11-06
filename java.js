@@ -43,12 +43,12 @@ function cadastrar_cliente() {
     let codigo_barra;
     if (!codigo_barra) {
         do {
-            codigo_barra = gerarCodigoBarras();
+            codigo_barra = 1 //gerarCodigoBarras();
         } while (codigoExiste(codigo_barra));
     }
 
     const novoCliente = {
-        id: Date.now(),
+        id:  Date.now(),
         nome,
         senha,
         cpf,
@@ -69,7 +69,7 @@ function cadastrar_cliente() {
 
 
     mostrarMensagemCliente(`Cliente ${nome} cadastrado. Código de barras: ${codigo_barra}`, false)
-    atualizarResumo()
+    // atualizarResumo()
 }
 
 
@@ -104,6 +104,6 @@ function excluir_cliente() {
 
     mostrarMensagemCliente(`Cliente ${removido.nome} excluído.`, false)
     atualizarTabela()
-    atualizarResumo()
+    // atualizarResumo()
     atualizarGraficosDinamicos()
 }

@@ -130,6 +130,25 @@ header h1{
     box-shadow: 5px 5px 0 #111; 
 }
 
+.linha{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.painel{
+
+
+
+}
+
+.linha > :not(:first-child) {
+    border-left: 2px dashed #111;
+    padding-left: 20px;
+  }
+
 /* #card-usuario, #card-produto{
     display: none;
 } */
