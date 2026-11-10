@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Beto Carrero World - Gestão & Atrações</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grafico.css">
 </head>
 
 <body>
@@ -93,40 +94,26 @@
 
 
             <section class="card chart-card">
-                <h2>Estatísticas e Atrações</h2>
+                <h2>vendas por produto</h2>
 
 
-                <div style="margin-bottom: 20px;">
-                    <h3>Distribuição por Rosca</h3>
-                    <div class="chart-container">
-                        <canvas id="donutChart"></canvas>
-                    </div>
-                </div>
+               
 
-                <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+                <label for="ordenacao">Ordenar por:</label>
+
+                <select id="ordenacao">
+                  <option value="maior">Mais vendidos</option>
+                  <option value="menor">Menos vendidos</option>
+                  <option value="az">Nome (A-Z)</option>
+                  <option value="za">Nome (Z-A)</option>
+                </select>
+              
+                <div id="grafico"></div>
+              
 
 
-                <div style="margin-bottom: 20px;">
-                    <h3>Fluxo de Visitantes (Barras)</h3>
-                    <div class="chart-container">
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
+                
 
-                <div class="chart-legend-custom">
-                    <span class="legend-item">0<span class="dot radical"></span> Radicais: <strong
-                            id="num-radical">0</strong></span>
-                    <span class="legend-item"><span class="dot familia"></span> Família: <strong
-                            id="num-familia">0</strong></span>
-                    <span class="legend-item"><span class="dot comida"></span> Comida: <strong
-                            id="num-comida">0</strong></span>
-                    <span class="legend-item"><span class="dot personagens"></span> Personagens: <strong
-                            id="num-personagens">0</strong></span>
-                    <span class="legend-item"><span class="dot zoologico"></span> Zoológico: <strong
-                            id="num-zoologico">0</strong></span>
-                    <span class="legend-item"><span class="dot museu"></span> Museu: <strong
-                            id="num-museu">0</strong></span>
-                </div>
             </section>
         </div>
 
@@ -203,6 +190,7 @@
 
     <script src="./src/script.js"></script>
     <script src="./java.js"></script>
+    <script src="src/grafico.js"></script>
 </body>
 
 </html>

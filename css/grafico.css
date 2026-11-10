@@ -1,0 +1,21 @@
+
+
+  select {
+    background: #292d3e;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  #grafico {
+        font-family: Arial, sans-serif;
+    background: #171923;
+    color: #eee;
+    padding: 24px;
+
+    width: 100%;
+    max-width: 850px;
+  }

@@ -100,131 +100,34 @@ function removerProduto(index) {
    
 // }
 
-function calcularTotaisPorCategoria() {
-    let totais = {
-        radical: 0,
-        familia: 0,
-        comida: 0,
-        personagens: 0,
-        zoologico: 0,
-        museu: 0
-    };
-
-    produtos.forEach(prod => {
-        if (totais[prod.categoria] !== undefined) {
-            totais[prod.categoria] += 1;
-        }
-    });
-
-    return [
-        totais.radical,
-        totais.familia,
-        totais.comida,
-        totais.personagens,
-        totais.zoologico,
-        totais.museu
-    ];
-}
-
-function atualizarGraficosDinamicos() {
-    const dadosCategorias = calcularTotaisPorCategoria();
-    const labelsCategorias = ['Radicais', 'Família', 'Comida', 'Personagens', 'Zoológico', 'Museu'];
-    const coresCategorias = ['#e74c3c', '#3498db', '#f1c40f', '#9b59b6', '#2ecc71', '#f36608'];
 
 
-    const elRadical = document.getElementById('num-radical');
-    const elFamilia = document.getElementById('num-familia');
-    const elComida = document.getElementById('num-comida');
-    const elPersonagens = document.getElementById('num-personagens');
-    const elZoologico = document.getElementById('num-zoologico');
-    const elMuseu = document.getElementById('num-museu');
-
-    if (elRadical) elRadical.innerText = dadosCategorias[0];
-    if (elFamilia) elFamilia.innerText = dadosCategorias[1];
-    if (elComida) elComida.innerText = dadosCategorias[2];
-    if (elPersonagens) elPersonagens.innerText = dadosCategorias[3];
-    if (elZoologico) elZoologico.innerText = dadosCategorias[4];
-    if (elMuseu) elMuseu.innerText = dadosCategorias[5];
-
-
-    const idsSetores = ['radical', 'familia', 'comida', 'personagens', 'zoologico', 'museu'];
-    idsSetores.forEach((id, i) => {
-        const el = document.getElementById('visitas-' + id);
-        if (el) el.innerText = dadosCategorias[i];
-    });
-
-
-    if (meuGraficoRosca) {
-        meuGraficoRosca.data.datasets[0].data = dadosCategorias;
-        meuGraficoRosca.update();
-    } else {
-        const ctxRosca = document.getElementById('donutChart');
-        if (ctxRosca) {
-            meuGraficoRosca = new Chart(ctxRosca.getContext('2d'), {
-                type: 'doughnut',
-                data: {
-                    labels: labelsCategorias,
-                    datasets: [{
-                        data: dadosCategorias,
-                        backgroundColor: coresCategorias,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-        }
-    }
-
-
-    if (meuGraficoBarras) {
-        meuGraficoBarras.data.datasets[0].data = dadosCategorias;
-        meuGraficoBarras.update();
-    } else {
-        const ctxBarras = document.getElementById('barChart');
-        if (ctxBarras) {
-            meuGraficoBarras = new Chart(ctxBarras.getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: labelsCategorias,
-                    datasets: [{
-                        label: 'Visitantes por Atração',
-                        data: dadosCategorias,
-                        backgroundColor: coresCategorias,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: { precision: 0 }
-                        }
-                    }
-                }
-            });
-        }
-    }
-}
 
 window.addEventListener('DOMContentLoaded', () => {
     atualizarTabela();
     // atualizarResumo();
-    atualizarGraficosDinamicos();
+    // atualizarGraficosDinamicos();
 });
 
+// let ingressos = []
 function atualizar_card(){
-let ingressos = JSON.parse(localStorage.getItem('ingressos'))
-let produtos = JSON.parse(localStorage.getItem('produtos'))
-let clientes = JSON.parse(localStorage.getItem('clientes'))
+    // ingressos = JSON.parse(localStorage.getItem('ingressos'))
+let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
+let produtos = JSON.parse(localStorage.getItem('produtos'))  || []
+let clientes = JSON.parse(localStorage.getItem('clientes')) || []
+let visistas_por_setor = []
+
+for(let i = 0;  i < produtos.length; i++ ){
+    visistas_por_setor.push(
+        {
+            produto: produtos[i].codigo,
+            qtd : ingressos.filter( (ingresso) => ingresso.produto == produtos[i].codigo ).length
+        }
+    )
+}
+
+console.log(visistas_por_setor);
+
 
 document.getElementById ('qtd-ingressos').innerHTML = ingressos.length
 document.getElementById ('qtd-produtos').innerHTML = produtos.length
@@ -232,7 +135,4 @@ document.getElementById ('qtd-visitas').innerHTML = clientes.length
 }
 
 atualizar_card()
-atualizar_card()
-atualizar_card()
-atualizar_card()
-atualizar_card()
+
