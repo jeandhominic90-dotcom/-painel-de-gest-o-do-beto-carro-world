@@ -132,7 +132,7 @@ function iniciar_setor(){
   let  codigo_setor = localStorage.getItem('setor_aberto')
   document.getElementById('categoria-produto').value = codigo_setor
   
-  for(let i = 0 ; produtos.length; i++){
+  for(let i = 0 ; i<produtos.length; i++){
       if(produtos[i].codigo == codigo_setor){
         document.getElementById('title-setor').innerHTML += produtos[i].nome
 

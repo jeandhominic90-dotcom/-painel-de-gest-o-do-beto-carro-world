@@ -166,6 +166,7 @@ header h1{
     outline: none;
     background: #fdfdfd;
     font-size: 0.9rem;
+    color: #111;
 }
 
 .form-group input:focus, .form-group select:focus{
@@ -361,4 +362,22 @@ table th {
 .mensagem-cliente.erro {
     background: #fdecea;
     border: 1px solid #e74c3c;
+}
+
+.chart-card{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#selecao_do_grafico{
+    width: 90%;
+}
+
+#grafico{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000044;
 }

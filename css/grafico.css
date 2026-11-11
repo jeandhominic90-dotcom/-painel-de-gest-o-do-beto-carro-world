@@ -1,7 +1,7 @@
 
 
   select {
-    background: #292d3e;
+    background:  #f36608; ;
     color: white;
     border: 1px solid #555;
     border-radius: 6px;
@@ -11,11 +11,10 @@
   }
 
   #grafico {
-        font-family: Arial, sans-serif;
-    background: #171923;
+    font-family: Arial, sans-serif;
+    background:  #fff;
     color: #eee;
     padding: 24px;
-
     width: 100%;
     max-width: 850px;
   }

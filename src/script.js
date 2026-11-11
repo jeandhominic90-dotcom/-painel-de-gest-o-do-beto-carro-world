@@ -47,7 +47,7 @@ function cadastrar_produtos() {
     produtos.push({ nome, descricao, codigo, categoria, })
     atualizarTabela();
     // atualizarResumo();
-    atualizarGraficosDinamicos();
+    // atualizarGraficosDinamicos();
 
 
     console.log(produtos)
@@ -69,6 +69,7 @@ function atualizarTabela() {
             <td class="acoes">
                 <button class="btn-excluir" onclick="removerProduto(${index})">Excluir</button>
                 <button class="btn-setor" onclick="abrirSetor(${prod.codigo})">abrir setor</button>
+                <button class="btn-editar" onclick="editar(${prod.codigo})">editar</button>
             </td>
         `;
         tabelaCorpo.appendChild(linha);
@@ -80,12 +81,24 @@ function abrirSetor(codigo) {
     window.location.href = "setores.html";
 }
 
+function editar(codigo){
+    produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    let produto = produtos.find((p) => p.codigo == codigo)
+    alert(produto.nome)
+    produto.nome = prompt("Digite o novo nome do produto")
+    produto.descricao = prompt("Digite a nova descrição do produto")
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+    atualizarTabela();
+    atualizarGrafico();
+
+}
+
 function removerProduto(index) {
+    produtos = JSON.parse(localStorage.getItem('produtos')) || [];
     produtos.splice(index, 1);
     localStorage.setItem('produtos', JSON.stringify(produtos));
     atualizarTabela();
-    // atualizarResumo();
-    atualizarGraficosDinamicos();
+    atualizarGrafico();
 }
 
 // function atualizarResumo() {
@@ -115,10 +128,11 @@ function atualizar_card(){
 let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
 let produtos = JSON.parse(localStorage.getItem('produtos'))  || []
 let clientes = JSON.parse(localStorage.getItem('clientes')) || []
-let visistas_por_setor = []
+let visistas_por_produto = []
+
 
 for(let i = 0;  i < produtos.length; i++ ){
-    visistas_por_setor.push(
+    visistas_por_produto.push(
         {
             produto: produtos[i].codigo,
             qtd : ingressos.filter( (ingresso) => ingresso.produto == produtos[i].codigo ).length
@@ -126,7 +140,9 @@ for(let i = 0;  i < produtos.length; i++ ){
     )
 }
 
-console.log(visistas_por_setor);
+localStorage.setItem("visitas_por_produto" , JSON.stringify(visistas_por_produto))
+
+console.log(visistas_por_produto);
 
 
 document.getElementById ('qtd-ingressos').innerHTML = ingressos.length

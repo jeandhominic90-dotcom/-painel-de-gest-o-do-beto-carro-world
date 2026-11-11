@@ -7,11 +7,13 @@ produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 //     { codigo: 3, nome: "Headset" }
 //   ];
 
-  const vendas = [
-    { produto: '7891591191818', qtd: 90 },
-    { produto: "7897957135908", qtd: 120 },
-    { produto: "7896609150580", qtd: 35 },
-  ];
+  const visitas_por_produto = JSON.parse(localStorage.getItem('visitas_por_produto')) || [];
+  
+  // [
+  //   { produto: '7891591191818', qtd: 90 },
+  //   { produto: "7897957135908", qtd: 120 },
+  //   { produto: "7896609150580", qtd: 35 },
+  // ];
 
   const nomes = new Map(
     produtos.map(p => [p.codigo, p.nome])
@@ -20,7 +22,7 @@ produtos = JSON.parse(localStorage.getItem('produtos')) || [];
   console.log(nomes);
   
 
-  const dados = vendas.map(v => ({
+  const dados = visitas_por_produto.map(v => ({
     produto: v.produto,
     qtd: v.qtd,
     nome: nomes.get(v.produto) ?? `Produto ${v.produto}`
@@ -89,7 +91,7 @@ produtos = JSON.parse(localStorage.getItem('produtos')) || [];
       .join(
         enter => enter.append("rect")
           .attr("class", "barra")
-          .attr("fill", "#8175e9")
+          .attr("fill", "#2980b9")
           .attr("rx", 5)
           .attr("x", x(0))
           .attr("y", d => y(d.produto))
@@ -107,7 +109,7 @@ produtos = JSON.parse(localStorage.getItem('produtos')) || [];
       .join(
         enter => enter.append("text")
           .attr("class", "nome")
-          .attr("fill", "#eee")
+          .attr("fill", "#222")
           .attr("font-size", 14)
           .attr("text-anchor", "end")
           .attr("x", margem.left - 12)
@@ -124,7 +126,7 @@ produtos = JSON.parse(localStorage.getItem('produtos')) || [];
       .join(
         enter => enter.append("text")
           .attr("class", "valor")
-          .attr("fill", "#eee")
+          .attr("fill", "#222")
           .attr("font-size", 14)
           .attr("x", d => x(d.qtd) + 8)
           .attr("y", d =>
