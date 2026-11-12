@@ -184,4 +184,3 @@ function atualizarTabela_clientes() {
     }
 
     atualizar_card()
-
