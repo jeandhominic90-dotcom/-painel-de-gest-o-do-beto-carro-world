@@ -16,11 +16,11 @@ function gerarCodigoBarras() {
     return codigo + digito;
 }
 
-let meuGraficoRosca = null;
-let meuGraficoBarras = null;
+
 
 const formProduto = document.getElementById('form-produto');
 const tabelaCorpo = document.querySelector('#tabela-produtos tbody');
+const tabelaCorpo_clientes = document.querySelector('#tabela-clientes tbody')
 const totalProdutosCadastrados = document.getElementById('total-produtos-cadastrados');
 const totalVendasEl = document.getElementById('total-vendas');
 const qtd_visitas = document.getElementById('qtd-visitas');
@@ -44,6 +44,7 @@ function cadastrar_produtos() {
 
 
 
+
     produtos.push({ nome, descricao, codigo, categoria, })
     atualizarTabela();
     // atualizarResumo();
@@ -54,101 +55,133 @@ function cadastrar_produtos() {
     localStorage.setItem('produtos', JSON.stringify(produtos))
 }
 
+function atualizarTabela_clientes() {
+    tabelaCorpo_clientes.innerHTML = '';
 
-
-function atualizarTabela() {
-    tabelaCorpo.innerHTML = '';
-
-    produtos.forEach((prod, index) => {
-        console.log(prod)
+    clientes.forEach(( c) => {
+        console.log(c)
         const linha = document.createElement('tr');
         linha.innerHTML = `
+            <td>${c.nome}</td>
+            <td>${c.cpf}</td>
+            <td>${c.data}</td>
+            <td>${c.codigo_barra}</td>
+            <td>${c.id}</td>
+            <td class="acoes">
+                <button class="btn-excluir" onclick="remover_cliente(${c.id})">Excluir</button>
+                <button class="btn-editar" onclick="editar_cliente(${c.id})">editar</button>
+            </td>
+        `;
+        tabelaCorpo_clientes.appendChild(linha);
+    });
+}
+    function editar_cliente(id) {
+        clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+        let cliente = clientes.find((c) => c.id == id)
+        alert(cliente.nome)
+        cliente.nome = prompt("Digite o nome de um novo clientes", cliente.nome)
+        cliente.data = prompt("Digite a nova data ", cliente.data)
+        localStorage.setItem('clientes', JSON.stringify(clientes));
+        atualizarTabela_clientes();
+
+    }
+
+
+
+    function atualizarTabela() {
+        tabelaCorpo.innerHTML = '';
+
+        produtos.forEach((prod, index) => {
+            console.log(prod)
+            const linha = document.createElement('tr');
+            linha.innerHTML = `
             <td>${prod.nome}</td>
             <td>${prod.descricao}</td>
-            <td>${prod.codigo}<br></td>
+            <td>${prod.codigo}</td>
             <td class="acoes">
                 <button class="btn-excluir" onclick="removerProduto(${index})">Excluir</button>
                 <button class="btn-setor" onclick="abrirSetor(${prod.codigo})">abrir setor</button>
                 <button class="btn-editar" onclick="editar(${prod.codigo})">editar</button>
             </td>
         `;
-        tabelaCorpo.appendChild(linha);
+            tabelaCorpo.appendChild(linha);
+        });
+    }
+
+    function abrirSetor(codigo) {
+        localStorage.setItem('setor_aberto', codigo)
+        window.location.href = "setores.html";
+    }
+
+    function editar(codigo) {
+        produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+        let produto = produtos.find((p) => p.codigo == codigo)
+        alert(produto.nome)
+        produto.nome = prompt("Digite o novo nome do produto")
+        produto.descricao = prompt("Digite a nova descrição do produto")
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+        atualizarTabela();
+        atualizarGrafico();
+
+    }
+
+    function removerProduto(index) {
+        produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+        produtos.splice(index, 1);
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+        atualizarTabela();
+        atualizarGrafico();
+    }
+
+    // function atualizarResumo() {
+
+
+
+
+
+
+
+    //     if (qtd_visitas) qtd_visitas.innerHTML = `<strong>Total de visitas:</strong> ${totalVisitas}`;
+
+    // }
+
+
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+        atualizarTabela();
+        atualizarTabela_clientes()
+        // atualizarResumo();
+        // atualizarGraficosDinamicos();
     });
-}
 
-function abrirSetor(codigo) {
-    localStorage.setItem('setor_aberto', codigo)
-    window.location.href = "setores.html";
-}
-
-function editar(codigo){
-    produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-    let produto = produtos.find((p) => p.codigo == codigo)
-    alert(produto.nome)
-    produto.nome = prompt("Digite o novo nome do produto")
-    produto.descricao = prompt("Digite a nova descrição do produto")
-    localStorage.setItem('produtos', JSON.stringify(produtos));
-    atualizarTabela();
-    atualizarGrafico();
-
-}
-
-function removerProduto(index) {
-    produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-    produtos.splice(index, 1);
-    localStorage.setItem('produtos', JSON.stringify(produtos));
-    atualizarTabela();
-    atualizarGrafico();
-}
-
-// function atualizarResumo() {
-    
-    
+    // let ingressos = []
+    function atualizar_card() {
+        // ingressos = JSON.parse(localStorage.getItem('ingressos'))
+        let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
+        let produtos = JSON.parse(localStorage.getItem('produtos')) || []
+        let clientes = JSON.parse(localStorage.getItem('clientes')) || []
+        let visistas_por_produto = []
 
 
-
-    
-
-//     if (qtd_visitas) qtd_visitas.innerHTML = `<strong>Total de visitas:</strong> ${totalVisitas}`;
-   
-// }
-
-
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    atualizarTabela();
-    // atualizarResumo();
-    // atualizarGraficosDinamicos();
-});
-
-// let ingressos = []
-function atualizar_card(){
-    // ingressos = JSON.parse(localStorage.getItem('ingressos'))
-let ingressos = JSON.parse(localStorage.getItem('ingressos')) || []
-let produtos = JSON.parse(localStorage.getItem('produtos'))  || []
-let clientes = JSON.parse(localStorage.getItem('clientes')) || []
-let visistas_por_produto = []
-
-
-for(let i = 0;  i < produtos.length; i++ ){
-    visistas_por_produto.push(
-        {
-            produto: produtos[i].codigo,
-            qtd : ingressos.filter( (ingresso) => ingresso.produto == produtos[i].codigo ).length
+        for (let i = 0; i < produtos.length; i++) {
+            visistas_por_produto.push(
+                {
+                    produto: produtos[i].codigo,
+                    qtd: ingressos.filter((ingresso) => ingresso.produto == produtos[i].codigo).length
+                }
+            )
         }
-    )
-}
 
-localStorage.setItem("visitas_por_produto" , JSON.stringify(visistas_por_produto))
+        localStorage.setItem("visitas_por_produto", JSON.stringify(visistas_por_produto))
 
-console.log(visistas_por_produto);
+        console.log(visistas_por_produto);
 
 
-document.getElementById ('qtd-ingressos').innerHTML = ingressos.length
-document.getElementById ('qtd-produtos').innerHTML = produtos.length
-document.getElementById ('qtd-visitas').innerHTML = clientes.length
-}
+        document.getElementById('qtd-ingressos').innerHTML = ingressos.length
+        document.getElementById('qtd-produtos').innerHTML = produtos.length
+        document.getElementById('qtd-visitas').innerHTML = clientes.length
+    }
 
-atualizar_card()
+    atualizar_card()
 
