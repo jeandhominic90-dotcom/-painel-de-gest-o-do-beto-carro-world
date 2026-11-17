@@ -85,7 +85,14 @@ function atualizarTabela_clientes() {
         atualizarTabela_clientes();
 
     }
-
+ 
+    function remover_cliente(id){
+        clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+        let index_pos = clientes.findIndex((c) => c.id == id)
+        clientes.splice(index_pos,1)
+        localStorage.setItem('clientes', JSON.stringify(clientes));
+        atualizarTabela_clientes();
+    }
 
 
     function atualizarTabela() {
