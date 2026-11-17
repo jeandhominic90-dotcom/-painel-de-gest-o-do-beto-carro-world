@@ -1,0 +1,151 @@
+{
+  "parque": "Beto Carrero World",
+  "areas_tematicas": [
+    {
+      "nome": "Ilha dos Piratas",
+      "codigo": "P",
+      "cor": "Roxo/Lilás",
+      "itens": [
+        "Ponto Naval",
+        "Barco Pirata",
+        "Casa do Projeto Tamar",
+        "Experiência: Passeio de Helicóptero"
+      ]
+    },
+    {
+      "nome": "Triplikland",
+      "codigo": "T",
+      "cor": "Rosa",
+      "itens": [
+        "Rede-gigante",
+        "Xicaras Malucas",
+        "Loja da Turma da Luluzinha",
+        "Baby Elefante"
+      ]
+    },
+    {
+      "nome": "Vila Germânica",
+      "codigo": "G",
+      "cor": "Amarelo",
+      "itens": [
+        "Tigor Mountain",
+        "Leander's Süß & Fritas",
+        "Carrossel Veneziano",
+        "Autopista",
+        "Encontre e Direte",
+        "Encontre o Trolls",
+        "Encontre o Bob Esponja",
+        "Mundo dos Cavalos"
+      ]
+    },
+    {
+      "nome": "Avenida das Nações",
+      "codigo": "A",
+      "cor": "Azul",
+      "itens": [
+        "Castelo das Nações",
+        "Carrossel",
+        "Esculturas Roberto Burton",
+        "Ponto de Encontro",
+        "Praça de Eventos",
+        "Encontre o Megamente"
+      ]
+    },
+    {
+      "nome": "Cowboyland",
+      "codigo": "C",
+      "cor": "Laranja",
+      "itens": [
+        "Teatro Acqua",
+        "Encontro e Tomo do Betinho",
+        "Betinho Carrero",
+        "Montanha-russa Dum-Dum",
+        "Shooting Gallery (Tiro ao alvo)",
+        "Lanchonete The Central Burger",
+        "Lanchonete Billy the Best",
+        "Lanchonete Hungry Dogs",
+        "Lanchonete Pastel de Feira",
+        "Restaurante Casa do Monstro",
+        "Lanchonete Pizza Hut",
+        "Chapéu o Beto Carrero",
+        "Sobremesas",
+        "Lanchonete X-A",
+        "Memorial Beto Carrero",
+        "Show O Sonho do Cowboy",
+        "Aldeia Indígena",
+        "Fort Alamo",
+        "Cemitério"
+      ]
+    },
+    {
+      "nome": "Nerd Planet",
+      "codigo": "N",
+      "cor": "Azul Escuro",
+      "itens": [
+        "Spin Blast",
+        "Nerd Shop",
+        "Nerd Lanches",
+        "Super Soaker Splash",
+        "Sobremesas",
+        "Lanchonete Burger Mania"
+      ]
+    },
+    {
+      "nome": "Madagascar",
+      "codigo": "M",
+      "cor": "Laranja Escuro",
+      "itens": [
+        "Madagascar Circus Show",
+        "Zaragosa's Hungry Wagon",
+        "Cirrus Plaza",
+        "Encontro com Personagens",
+        "Madagascar Crazy River Adventure",
+        "Chimp's Bazar Sorvetes",
+        "Sobremesas"
+      ]
+    },
+    {
+      "nome": "Aventura Radical",
+      "codigo": "R",
+      "cor": "Vermelho",
+      "itens": [
+        "Target Games",
+        "Portal da Escuridão",
+        "Lanchonete Natural Hits",
+        "Star Mountain",
+        "Lanchonete Vira México",
+        "Loja Fei Fei",
+        "FireWhip",
+        "Lanchonete Trolls",
+        "Tchibum"
+      ]
+    },
+    {
+      "nome": "Hot Wheels",
+      "codigo": "H",
+      "cor": "Vermelho Claro/Vinho",
+      "itens": [
+        "Sobremesas",
+        "Produtos Beto Carrero",
+        "Hot Wheels Big Drop",
+        "Hot Wheels Extreme Kids",
+        "Hot Wheels Turbo Drive",
+        "Loja Hot Wheels",
+        "Lanchonete Hot Wheels",
+        "Hot Wheels Epic Show"
+      ]
+    },
+    {
+      "nome": "Terra da Fantasia",
+      "codigo": "F",
+      "cor": "Azul Claro",
+      "itens": [
+        "Loja Bibi",
+        "Estação João A. de Queiroz",
+        "Casa de Beto Carrero",
+        "Assalto ao Trem",
+        "Caverna dos Dinossauros"
+      ]
+    }
+  ]
+}

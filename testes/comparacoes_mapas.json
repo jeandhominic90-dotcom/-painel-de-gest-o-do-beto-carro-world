@@ -1,0 +1,32 @@
+{
+  "comparacao_mapas": {
+    "areas_exclusivas_mapa_1": [
+      "Triplikland",
+      "Nerd Planet",
+      "Madagascar",
+      "Hot Wheels"
+    ],
+    "areas_removidas_ou_renomeadas_no_mapa_1": [
+      "Mundo Animal (descontinuado/reorganizado)",
+      "Velho Oeste (renomeado para Cowboyland)"
+    ],
+    "mudancas_de_cores_e_codigos": {
+      "avenida_das_nacoes": "Mudou de Rosa/Magenta para Azul",
+      "vila_germanica": "Mudou de Amarelo Escuro/Laranja para Amarelo",
+      "terra_da_fantasia": "Mudou de Azul (código E) para Azul Claro (código F)",
+      "aventura_radical": "Manteve o Vermelho, mas o código da letra mudou de F para R"
+    },
+    "rebranding_de_atracoes": [
+      "Big Tower passou a ser Hot Wheels Big Drop",
+      "Extreme Show passou a ser Hot Wheels Epic Show",
+      "Império das Águas passou a ser Madagascar Crazy River Adventure",
+      "Super Carros deu lugar ao Hot Wheels Turbo Drive"
+    ],
+    "novas_atracoes_e_personagens_mapa_1": [
+      "Spin Blast",
+      "Super Soaker Splash",
+      "Casa do Projeto Tamar",
+      "Pontos de encontro com personagens da DreamWorks (Trolls, Megamente, Bob Esponja)"
+    ]
+  }
+}
