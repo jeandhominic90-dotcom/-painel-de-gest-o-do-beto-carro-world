@@ -43,16 +43,16 @@
       "nome": "Vila Germânica",
       "codigo_cor": "Amarelo Escuro/Laranja",
       "itens": [
-        "G1 Bier Haus",
-        "G2 Autopista",
+        "C1 Bier Haus",
+        "C2 Autopista",
         "G3 Produtos Beto Carrero",
-        "G4 Mundo Maravilhoso dos Cavalos",
-        "G5 Xícaras Malucas",
-        "G6 Excalibur",
-        "G7 Cine Renato Aragão",
-        "G8 Tigor Mountain",
-        "G9 Acqua Boat",
-        "G10 Kid Play"
+        "C4 Mundo Maravilhoso dos Cavalos",
+        "C5 Xícaras Malucas",
+        "C6 Excalibur",
+        "C7 Cine Renato Aragão",
+        "C8 Tigor Mountain",
+        "C9 Acqua Boat",
+        "C10 Kid Play"
       ]
     },
     {
@@ -74,10 +74,10 @@
       "nome": "Ilha dos Piratas",
       "codigo_cor": "Lilás/Roxo",
       "itens": [
-        "P1 Casa dos Espelhos",
-        "P2 Caverna dos Piratas",
-        "P3 Galeão Pirata",
-        "P4 Barco Pirata"
+        "E1 Casa dos Espelhos",
+        "E2 Caverna dos Piratas",
+        "E3 Galeão Pirata",
+        "E4 Barco Pirata"
       ]
     },
     {
@@ -104,16 +104,16 @@
       "nome": "Terra da Fantasia",
       "codigo_cor": "Azul",
       "itens": [
-        "E1 Dinomagic: Estação João Alves de Queiroz",
-        "E2 Casa de Beto Carrero",
-        "E3 Caverna dos Dinossauros",
-        "E4 Horta Modelo",
-        "E5 Terra dos Gigantes",
-        "E6 Vale Encantado",
-        "E7 Trenzinho Vila Esperança",
-        "E8 Vila Árabe",
-        "E9 Sítio Vovô Caslu",
-        "E10 O Mundo Mágico das Aves"
+        "G1 Dinomagic: Estação João Alves de Queiroz",
+        "G2 Casa de Beto Carrero",
+        "G3 Caverna dos Dinossauros",
+        "G4 Horta Modelo",
+        "G5 Terra dos Gigantes",
+        "G6 Vale Encantado",
+        "G7 Trenzinho Vila Esperança",
+        "G8 Vila Árabe",
+        "G9 Sítio Vovô Caslu",
+        "G10 O Mundo Mágico das Aves"
       ]
     }
   ]

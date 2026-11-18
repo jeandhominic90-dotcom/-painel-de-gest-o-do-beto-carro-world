@@ -1,4 +1,5 @@
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+let clientes = JSON.parse(localStorage.getItem('clientes')) || []; 
 
 
 
@@ -58,7 +59,7 @@ function cadastrar_produtos() {
 function atualizarTabela_clientes() {
     tabelaCorpo_clientes.innerHTML = '';
 
-    clientes.forEach(( c) => {
+    clientes.forEach((c) => {
         console.log(c)
         const linha = document.createElement('tr');
         linha.innerHTML = `

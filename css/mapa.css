@@ -1,0 +1,65 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+
+    height: 100%;
+}
+
+body{
+ 
+    background-color: #FFD700;
+    color: #111;
+    padding: 20px;
+    height: 100%;
+}
+
+#topo{
+    height: 20%;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 25px;
+    background-color:  #c0392b; 
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #111;
+    box-shadow: 4px 4px 0 #111;
+}
+
+
+
+header h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff; 
+    border-bottom: none;
+    display: inline-block;
+    padding-bottom: 0;
+    text-shadow: 2px 2px 0 #111;
+}
+
+#div-mapa{
+    height: 80%;
+    background-image: url(../img/mapa.png);
+}
+
+.btn-atracoes{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    
+}
+
+.btn-atracoes:hover{
+    cursor: pointer;
+}
+
