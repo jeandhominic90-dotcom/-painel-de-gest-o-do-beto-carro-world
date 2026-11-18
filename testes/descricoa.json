@@ -1,0 +1,268 @@
+{
+  "parque": "Beto Carrero World",
+  "areas": [
+    {
+      "nome": "Avenida das Nações",
+      "sigla": "A",
+      "descricao": "Porta de entrada do parque e o ponto de encontro principal.",
+      "atracoes": [
+        {
+          "nome": "Castelo das Nações",
+          "tipo": "Estrutura",
+          "descricao": "Fachada colorida icônica onde ficam as bilheterias, acesso principal e lojas."
+        },
+        {
+          "nome": "No Ritmo de Trolls",
+          "tipo": "Espetáculo",
+          "descricao": "Espetáculo musical animado com os personagens da DreamWorks."
+        },
+        {
+          "nome": "Encontros com Personagens",
+          "tipo": "Experiência",
+          "descricao": "Pontos para tirar fotos com Trolls, Kung Fu Panda e Megamente."
+        },
+        {
+          "nome": "Praça de Eventos e Esculturas",
+          "tipo": "Estrutura",
+          "descricao": "Espaço central com as famosas esculturas de Romero Britto e serviços básicos."
+        }
+      ]
+    },
+    {
+      "nome": "Vila Germânica",
+      "sigla": "G",
+      "descricao": "Área inspirada na arquitetura alemã, logo à esquerda da entrada.",
+      "atracoes": [
+        {
+          "nome": "Tigor Mountain",
+          "tipo": "Brinquedo",
+          "descricao": "Montanha-russa familiar com curvas rápidas sobre um lago.",
+          "altura_minima_m": 0.95
+        },
+        {
+          "nome": "Excalibur",
+          "tipo": "Espetáculo",
+          "descricao": "Show medieval com duelos de cavaleiros e almoço incluso (atração paga à parte)."
+        },
+        {
+          "nome": "Carrossel Veneziano e Autopista",
+          "tipo": "Brinquedo",
+          "descricao": "Clássico carrossel de dois andares e carrinhos de bate-bate."
+        },
+        {
+          "nome": "Personagens",
+          "tipo": "Experiência",
+          "descricao": "Área para fotos com Shrek e sua turma, além do espaço Bob Esponja."
+        }
+      ]
+    },
+    {
+      "nome": "Triplikland",
+      "sigla": "T",
+      "descricao": "Espaço dedicado especialmente aos brinquedos clássicos e infantis.",
+      "atracoes": [
+        {
+          "nome": "Roda-Gigante",
+          "tipo": "Brinquedo",
+          "descricao": "Passeio tranquilo com vista panorâmica do parque."
+        },
+        {
+          "nome": "Baby Elefante e Xícaras Malucas",
+          "tipo": "Brinquedo",
+          "descricao": "Brinquedos giratórios leves feitos para crianças e famílias."
+        }
+      ]
+    },
+    {
+      "nome": "Ilha dos Piratas",
+      "sigla": "P",
+      "descricao": "Fica ao fundo à esquerda, com temática náutica e de aventura.",
+      "atracoes": [
+        {
+          "nome": "Barco Pirata",
+          "tipo": "Brinquedo",
+          "descricao": "Barco gigante que balança como um pêndulo até ficar quase na vertical.",
+          "altura_minima_m": 1.20
+        },
+        {
+          "nome": "Ponte Pênsil",
+          "tipo": "Estrutura",
+          "descricao": "Ponte suspensa sobre a água que liga os caminhos da ilha."
+        },
+        {
+          "nome": "Casa do Projeto Tamar",
+          "tipo": "Educação",
+          "descricao": "Espaço educativo sobre a preservação das tartarugas marinhas."
+        },
+        {
+          "nome": "Passeio de Helicóptero",
+          "tipo": "Atração Paga",
+          "descricao": "Voo panorâmico sobre o parque (pago à parte)."
+        }
+      ]
+    },
+    {
+      "nome": "Cowboyland",
+      "sigla": "C",
+      "descricao": "Ocupa a região central do parque com temática de velho oeste e homenagens ao criador do parque.",
+      "atracoes": [
+        {
+          "nome": "O Sonho do Cowboy",
+          "tipo": "Espetáculo",
+          "descricao": "Grande espetáculo musical de faroeste com cavalos, tiros e acrobacias."
+        },
+        {
+          "nome": "Rebuliço",
+          "tipo": "Brinquedo",
+          "descricao": "Brinquedo radical que gira de ponta-cabeça no ar.",
+          "altura_minima_m": 1.20
+        },
+        {
+          "nome": "Raskapuska",
+          "tipo": "Brinquedo",
+          "descricao": "Passeio tranquilo de barco dentro de uma montanha mágica com bonecos animados.",
+          "altura_minima_m": 0.80
+        },
+        {
+          "nome": "Montanha-Russa Dum-Dum",
+          "tipo": "Brinquedo",
+          "descricao": "Primeira montanha-russa ideal para crianças pequenas.",
+          "altura_minima_m": 0.80
+        },
+        {
+          "nome": "Memorial Beto Carrero",
+          "tipo": "Museu",
+          "descricao": "Museu com fotos, roupas, chapéus e a história do fundador do parque."
+        },
+        {
+          "nome": "Betinho Carrero 2D e Aldeia Indígena",
+          "tipo": "Estrutura",
+          "descricao": "Cinema infantil e cenografia temática de faroeste."
+        }
+      ]
+    },
+    {
+      "nome": "NERF Mania",
+      "sigla": "N",
+      "descricao": "Área temática inspirada nos lançadores NERF, com brinquedos interativos.",
+      "atracoes": [
+        {
+          "nome": "Spin Blast",
+          "tipo": "Brinquedo",
+          "descricao": "Disco gigante que gira enquanto desliza por um trilho elevado.",
+          "altura_minima_m": 1.20
+        },
+        {
+          "nome": "Super Soaker Splash",
+          "tipo": "Brinquedo",
+          "descricao": "Atração familiar giratória onde você atira água nos outros participantes.",
+          "altura_minima_m": 0.90
+        },
+        {
+          "nome": "NERF Arcade e Shop",
+          "tipo": "Atração Paga",
+          "descricao": "Jogos de tiro ao alvo (pagos à parte) e loja oficial da marca."
+        }
+      ]
+    },
+    {
+      "nome": "Madagascar",
+      "sigla": "M",
+      "descricao": "Inspirada nos filmes da DreamWorks, mistura show circense e aventura na água.",
+      "atracoes": [
+        {
+          "nome": "Madagascar Crazy River Adventure!",
+          "tipo": "Brinquedo",
+          "descricao": "Passeio em botes redondos por uma corredeira cheia de ondas e água.",
+          "altura_minima_m": 1.05
+        },
+        {
+          "nome": "Madagascar Circus Show",
+          "tipo": "Espetáculo",
+          "descricao": "Espetáculo de circo e dança com Alex, Glória, Rei Julien e os pinguins."
+        },
+        {
+          "nome": "Encontre os Personagens",
+          "tipo": "Experiência",
+          "descricao": "Espaço exclusivo para fotos com a turma de Madagascar."
+        }
+      ]
+    },
+    {
+      "nome": "Aventura Radical",
+      "sigla": "R",
+      "descricao": "Concentra as maiores montanhas-russas e atrações de adrenalina.",
+      "atracoes": [
+        {
+          "nome": "FireWhip",
+          "tipo": "Brinquedo",
+          "descricao": "Primeira montanha-russa invertida do Brasil, com 5 loopings e pés soltos.",
+          "altura_minima_m": 1.30
+        },
+        {
+          "nome": "Star Mountain",
+          "tipo": "Brinquedo",
+          "descricao": "Montanha-russa clássica de grande porte com dois loopings.",
+          "altura_minima_m": 1.20
+        },
+        {
+          "nome": "Tchibum",
+          "tipo": "Brinquedo",
+          "descricao": "Montanha-russa aquática com quedas rápidas que molham bastante.",
+          "altura_minima_m": 1.30
+        },
+        {
+          "nome": "Portal da Escuridão",
+          "tipo": "Atração Paga",
+          "descricao": "Atração de terror a pé com atores ao vivo (paga à parte)."
+        }
+      ]
+    },
+    {
+      "nome": "Hot Wheels",
+      "sigla": "H",
+      "descricao": "Área dedicada à velocidade e ao universo dos carrinhos Hot Wheels.",
+      "atracoes": [
+        {
+          "nome": "Hot Wheels Epic Show",
+          "tipo": "Espetáculo",
+          "descricao": "Apresentação de manobras radicais com carros, motos e caminhão em pista real."
+        },
+        {
+          "nome": "Hot Wheels Big Drop",
+          "tipo": "Brinquedo",
+          "descricao": "Torre de queda livre de 100 metros de altura.",
+          "altura_minima_m": 1.30
+        },
+        {
+          "nome": "Hot Wheels Turbo Drive",
+          "tipo": "Brinquedo",
+          "descricao": "Pista onde crianças e adultos pilotam carrinhos temáticos.",
+          "altura_minima_m": 0.95
+        },
+        {
+          "nome": "Hot Wheels Extreme Kids",
+          "tipo": "Estrutura",
+          "descricao": "Área de recreação e loja exclusiva com pista gigante."
+        }
+      ]
+    },
+    {
+      "nome": "Terra da Fantasia",
+      "sigla": "F",
+      "descricao": "Área de natureza e passeios temáticos ao fundo do parque.",
+      "atracoes": [
+        {
+          "nome": "DinoMagic (Estação João A. de Queiroz)",
+          "tipo": "Brinquedo",
+          "descricao": "Passeio de trem pela mata com encenação de assalto e viagem até o mundo dos dinossauros."
+        },
+        {
+          "nome": "Caverna dos Dinossauros",
+          "tipo": "Brinquedo",
+          "descricao": "Túnel temático com dinossauros animatrônicos e efeitos especiais dentro do percurso do trem."
+        }
+      ]
+    }
+  ]
+}
