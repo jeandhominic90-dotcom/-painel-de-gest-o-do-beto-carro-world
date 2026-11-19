@@ -1,75 +1,256 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/mapa.css">
-    <title>mapa</title>
+
+    <title>Mapa do Parque</title>
 </head>
+
 <body>
+
     <div id="container">
 
+    
         <div id="topo">
-            
             <header>
-            <h1>mapa do Parque</h1>
+                <h1>Mapa do Parque</h1>
             </header>
-    
         </div>
-    
+
         <div id="div-mapa">
 
-            <div id="mapa-01">
+            
+            <div id="mapa-01"></div>
 
-            </div>
-
+            
             <div id="mapa-02">
 
-                <button id="btn_atracao01" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao02" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao03" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao04" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao05" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao06" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao07" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao08" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao09" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
+                <button id="btn_atracao01"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="1"
+                    aria-label="Shrek">
+                </button>
+
+                <button id="btn_atracao02"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="2"
+                    aria-label="Bob Esponja">
+                </button>
+
+                <button id="btn_atracao03"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="3"
+                    aria-label="Atração 3">
+                </button>
+
+                <button id="btn_atracao04"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="4"
+                    aria-label="Betinho">
+                </button>
+
+                <button id="btn_atracao05"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="5"
+                    aria-label="Reboliço">
+                </button>
+
+                <button id="btn_atracao06"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="6"
+                    aria-label="Madagascar Circus Show">
+                </button>
+
+                <button id="btn_atracao07"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="7"
+                    aria-label="Madagascar">
+                </button>
+
+                <button id="btn_atracao08"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="8"
+                    aria-label="Madagascar Crazy River Adventure">
+                </button>
+
+                <button id="btn_atracao09"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="9"
+                    aria-label="Hot Wheels Big Drop">
+                </button>
 
             </div>
 
-            <div id="mapa-03">
+            
+            <div id="mapa-03"></div>
 
-            </div>
-
+            
             <div id="mapa-04">
 
-                <button id="btn_atracao10" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao11" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao12" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao13" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao14" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
+                <button id="btn_atracao10"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="10"
+                    aria-label="Casa do Projeto Tamar">
+                </button>
+
+                <button id="btn_atracao11"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="11"
+                    aria-label="Trolls">
+                </button>
+
+                <button id="btn_atracao12"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="12"
+                    aria-label="Trolls">
+                </button>
+
+                <button id="btn_atracao13"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="13"
+                    aria-label="Megamente">
+                </button>
+
+                <button id="btn_atracao14"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="14"
+                    aria-label="Cowboyland">
+                </button>
 
             </div>
 
+         
             <div id="mapa-05">
 
-                <button id="btn_atracao15" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao16" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao17" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao18" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao19" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
-                <button id="btn_atracao20" onclick="clik_atracao()" class="btn-atracoes" value="1"></button>
+                <button id="btn_atracao15"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="15"
+                    aria-label="Madagascar">
+                </button>
+
+                <button id="btn_atracao16"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="16"
+                    aria-label="Área Madagascar">
+                </button>
+
+                <button id="btn_atracao17"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="17"
+                    aria-label="Área Hot Wheels">
+                </button>
+
+                <button id="btn_atracao18"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="18"
+                    aria-label="Hot Wheels Epic Show">
+                </button>
+
+                <button id="btn_atracao19"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="19"
+                    aria-label="Hot Wheels Turbo Drive">
+                </button>
+
+                <button id="btn_atracao20"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="20"
+                    aria-label="FireWhip">
+                </button>
+
+                
+                <button id="btn_atracao21"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="21"
+                    aria-label="Kung Fu Panda">
+                </button>
+
+             
+                <button id="btn_atracao22"
+                    onclick="clik_atracao(this)"
+                    class="btn-atracoes"
+                    value="22"
+                    aria-label="Nerf Mania">
+                </button>
 
             </div>
 
-            <div id="mapa-06">
+            
+            <div id="mapa-06"></div>
 
-            </div>
-
-        
         </div>
+
     </div>
 
+
+    <div id="janela-atracao"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="titulo-atracao">
+
+        <div class="modal-conteudo">
+
+            <button
+                type="button"
+                class="fechar"
+                onclick="fecharJanela()"
+                aria-label="Fechar janela">
+                ✖
+            </button>
+
+            <h2 id="titulo-atracao"></h2>
+
+            <p id="codigo-atracao"></p>
+
+            <p id="cor-atracao"></p>
+
+            <img
+                id="foto-atracao"
+                src=""
+                alt="Imagem da área temática"
+                style="display: none;">
+
+            <p id="descricao-atracao"></p>
+
+            <h3>Atrações e serviços da área</h3>
+
+            <ul id="lista-atracoes"></ul>
+
+        </div>
+
+    </div>
+
+
+   
     <script src="./src/mapa.js"></script>
+
 </body>
 </html>

@@ -1,262 +1,419 @@
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-html{
-
-    height: 100%;
+html,
+body {
+    min-height: 100%;
 }
 
-body{
- 
+body {
     background-color: #FFD700;
     color: #111;
     padding: 20px;
-    height: 100%;
     margin: 0;
 }
 
-#container{
-    height: 100%;
+
+
+
+#container {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-
-}
-
-#topo{
-    height: 20%;
     width: 100%;
 }
 
-header{
+#topo {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+
+header {
     text-align: center;
-    margin-bottom: 25px;
-    background-color:  #c0392b; 
+    margin-bottom: 20px;
+    background-color: #c0392b;
     padding: 15px;
     border-radius: 12px;
     border: 2px solid #111;
     box-shadow: 4px 4px 0 #111;
 }
 
-
-
-header h1{
+header h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #fff; 
+    color: #fff;
     border-bottom: none;
     display: inline-block;
     padding-bottom: 0;
     text-shadow: 2px 2px 0 #111;
 }
 
-#div-mapa{
-    height: 80%; 
-    width: 80%;
-    background-image: url(../img/mapa-beto-carrero.jpg);
+
+
+
+#div-mapa {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../img/mapa-beto-carrero.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
+    background-size: 100% 100%;
+
     border-radius: 10px;
+    overflow: hidden;
 }
 
-.btn-atracoes{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: solid 1px white;
-    
+
+
+
+#mapa-01,
+#mapa-02,
+#mapa-03,
+#mapa-04,
+#mapa-05,
+#mapa-06 {
+    position: relative;
+    width: 100%;
 }
 
-.btn-atracoes:hover{
-    cursor: pointer;
- }
- /*  
- #btn_atracao01{
-    position: absolute;
-    top: 12%;
-    left: 16%;
-} */
-/* 
-#btn_atracao02{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}
-
-#btn_atracao03{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-} */ 
-
-/* #btn_atracao04{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao05{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao06{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-
-/* #btn_atracao07{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao08{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao09{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-  /* #btn_atracao10{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao11{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao12{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao13{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao14{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao15{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-
-/* #btn_atracao16{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-
-/* #btn_atracao16{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-
-/* #btn_atracao17{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao18{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-
-/* #btn_atracao19{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-
-/* #btn_atracao20{
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}  */
-#mapa-01{
+#mapa-01 {
     height: 7%;
-    width: 100%;
-    border: solid 1px orange;
-
+    border: 1px solid orange;
 }
 
-
-#mapa-02{
+#mapa-02 {
     height: 28%;
-    width: 100%;
-    border: solid 1px orange;
-
+    border: 1px solid orange;
 }
 
-
-
-#mapa-03{
+#mapa-03 {
     height: 6%;
-    width: 100%;
-    border: solid 1px orange;
-
+    border: 1px solid orange;
 }
 
-
-
-#mapa-04{
+#mapa-04 {
     height: 21%;
-    width: 100%;
-    border: solid 1px orange;
+    border: 1px solid orange;
 }
 
-
-#mapa-05{
+#mapa-05 {
     height: 26%;
-    width: 100%;
-    border: solid 1px orange;
-
+    border: 1px solid orange;
 }
 
-
-#mapa-06{
+#mapa-06 {
     height: 12%;
-    width: 100%;
-    border: solid 1px orange;
-
+    border: 1px solid orange;
 }
 
 
 
 
+.btn-atracoes {
+    position: absolute;
+    width: 5.5%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 2px solid #fff;
+
+    color: #111;
+    font-size: clamp(9px, 1vw, 15px);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    z-index: 10;
+}
+
+.btn-atracoes:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn-atracoes:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.btn-atracoes:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 3px;
+}
 
 
+
+
+#btn_atracao01 {
+    top: 24%;
+    left: 20.5%;
+}
+
+#btn_atracao02 {
+    top: 23%;
+    left: 25.8%;
+}
+
+#btn_atracao03 {
+    top: 14%;
+    left: 32.5%;
+}
+
+#btn_atracao04 {
+    top: 16%;
+    left: 42%;
+}
+
+#btn_atracao05 {
+    top: 19%;
+    left: 50.5%;
+}
+
+#btn_atracao06 {
+    top: 21%;
+    left: 57.3%;
+}
+
+#btn_atracao07 {
+    top: 25%;
+    left: 64.2%;
+}
+
+#btn_atracao08 {
+    top: 17%;
+    left: 70.2%;
+}
+
+#btn_atracao09 {
+    top: 32%;
+    left: 88.8%;
+}
+
+
+
+#btn_atracao10 {
+    top: 43%;
+    left: 7.5%;
+}
+
+#btn_atracao11 {
+    top: 58%;
+    left: 22.8%;
+}
+
+#btn_atracao12 {
+    top: 68%;
+    left: 17.5%;
+}
+
+#btn_atracao13 {
+    top: 70%;
+    left: 25.5%;
+}
+
+#btn_atracao14 {
+    top: 61%;
+    left: 52.5%;
+}
+
+
+
+#btn_atracao15 {
+    top: 68%;
+    left: 60.5%;
+}
+
+#btn_atracao16 {
+    top: 69%;
+    left: 68.5%;
+}
+
+#btn_atracao17 {
+    top: 35%;
+    left: 88.2%;
+}
+
+#btn_atracao18 {
+    top: 53%;
+    left: 92.5%;
+}
+
+#btn_atracao19 {
+    top: 74%;
+    left: 90.2%;
+}
+
+#btn_atracao20 {
+    top: 83%;
+    left: 89.5%;
+}
+
+
+
+
+/* Kung Fu Panda */
+#btn_atracao21 {
+    top: 10.5%;
+    left: 42%;
+}
+
+/* Nerf Mania */
+#btn_atracao22 {
+    top: 84%;
+    left: 39.5%;
+}
+
+
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 999;
+}
+
+.modal-conteudo {
+    position: relative;
+
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background-color: #fff;
+    color: #111;
+
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid #c0392b;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.modal-conteudo h2 {
+    color: #c0392b;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-conteudo h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #c0392b;
+}
+
+.modal-conteudo p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+
+#foto-atracao {
+    display: none;
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+
+
+
+#lista-atracoes {
+    padding-left: 25px;
+    margin-top: 12px;
+}
+
+#lista-atracoes li {
+    margin-bottom: 8px;
+}
+
+
+
+
+.modal-conteudo .fechar {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    background-color: #c0392b;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.modal-conteudo .fechar:hover {
+    background-color: #922b21;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 8px;
+    }
+
+    header {
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .btn-atracoes {
+        border-width: 1px;
+        font-size: 8px;
+    }
+
+    .modal-conteudo {
+        padding: 18px;
+    }
+}

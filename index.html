@@ -90,8 +90,10 @@
 
 
                 <section class="card chart-card">
-                    <h2>vendas por produto</h2>
-
+                    <div class="header-chart">
+                        <h2>Vendas por produto</h2>
+                        <button class="open_map" onclick="abrir_mapa()">Abrir mapa</button>
+                    </div>
 
 
                     <div id="selecao_do_grafico">
@@ -139,7 +141,8 @@
                         </div>
 
                         <button onclick="cadastrar_cliente()" class="btn-black">Cadastrar clientes</button>
-                        <button onclick="excluir_cliente()" class="btn-black btn-excluir-usuario">Excluir_usuário</button>
+                        <button onclick="excluir_cliente()"
+                            class="btn-black btn-excluir-usuario">Excluir_usuário</button>
                         <button onclick="editar_usuario()">Editar</button>
                         <p id="mensagem-cliente" class="mensagem-cliente"></p>
                     </div>
@@ -188,6 +191,7 @@
             </dialog>
     </main>
 
+    <script src="./src/mapa.js"></script>
     <script src="./src/script.js"></script>
     <script src="./java.js"></script>
     <script src="src/grafico.js"></script>

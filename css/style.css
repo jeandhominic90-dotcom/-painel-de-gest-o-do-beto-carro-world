@@ -394,3 +394,38 @@ table th {
     border-radius: 10px;
     box-shadow: 0 0 10px #00000044;
 }
+
+.header-chart {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.header-chart h2 {
+    grid-column: 2;
+    justify-self: center;
+    text-align: center;
+    margin: 0;
+    width: auto;
+}
+
+.open_map {
+    grid-column: 3;
+    justify-self: end;
+    margin-left: 0;
+    margin-right: 12px;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    background-color: #2980b9 !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    position: static;
+    z-index: 2;
+}
