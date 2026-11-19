@@ -76,14 +76,14 @@ header h1{
 
 .btn-atracoes:hover{
     cursor: pointer;
-}
-/* 
-#btn_atracao01{
+ }
+ /*  
+ #btn_atracao01{
     position: absolute;
-    top: 300px;
-    left: 180px;
-}
-
+    top: 12%;
+    left: 16%;
+} */
+/* 
 #btn_atracao02{
     position: absolute;
     top: 500px;
@@ -94,8 +94,119 @@ header h1{
     position: absolute;
     top: 500px;
     left: 200px;
-} */
+} */ 
 
+/* #btn_atracao04{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao05{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao06{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+
+/* #btn_atracao07{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao08{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao09{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+  /* #btn_atracao10{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao11{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao12{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao13{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao14{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao15{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+
+/* #btn_atracao16{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+
+/* #btn_atracao16{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+
+/* #btn_atracao17{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao18{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+
+/* #btn_atracao19{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
+
+/* #btn_atracao20{
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}  */
 #mapa-01{
     height: 7%;
     width: 100%;
