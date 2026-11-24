@@ -64,7 +64,7 @@ header h1 {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 8;
 
     background-image: url("../img/mapa-beto-carrero.jpg");
     background-repeat: no-repeat;
@@ -123,35 +123,28 @@ header h1 {
 
 .btn-atracoes {
     position: absolute;
-    width: 5.5%;
+    width: 4.8%;
     aspect-ratio: 1 / 1;
 
     border-radius: 50%;
     transform: translate(-50%, -50%);
 
     background-color: rgba(255, 255, 255, 0.18);
-    border: 2px solid #fff;
+    border: 1px solid transparent;
 
     color: #111;
-    font-size: clamp(9px, 1vw, 15px);
     font-weight: bold;
 
     cursor: pointer;
 
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        box-shadow 0.2s ease;
-
-    z-index: 10;
+  
 }
 
 .btn-atracoes:hover {
-    transform: translate(-50%, -50%) scale(1.15);
-    background-color: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); */
 }
-
+/* 
 .btn-atracoes:active {
     transform: translate(-50%, -50%) scale(0.95);
 }
@@ -159,93 +152,93 @@ header h1 {
 .btn-atracoes:focus-visible {
     outline: 3px solid #111;
     outline-offset: 3px;
-}
+} */
 
 
 
 
 #btn_atracao01 {
-    top: 24%;
-    left: 20.5%;
+    top: 47%;
+    left: 20.3%;
 }
 
 #btn_atracao02 {
-    top: 23%;
-    left: 25.8%;
+    top: 37%;
+    left: 25.4%;
 }
 
 #btn_atracao03 {
-    top: 14%;
-    left: 32.5%;
+    top: 18%;
+    left: 31.1%;
 }
 
 #btn_atracao04 {
-    top: 16%;
-    left: 42%;
+    top: 26%;
+    left: 41.75%;
 }
 
 #btn_atracao05 {
-    top: 19%;
-    left: 50.5%;
+    top: 22%;
+    left: 48.85%;
 }
 
 #btn_atracao06 {
-    top: 21%;
-    left: 57.3%;
+    top: 31%;
+    left: 55%;
 }
 
 #btn_atracao07 {
-    top: 25%;
-    left: 64.2%;
+    top: 68.5%;
+    left: 61%;
 }
 
 #btn_atracao08 {
-    top: 17%;
-    left: 70.2%;
+    top: 30%;
+    left: 66.5%;
 }
 
 #btn_atracao09 {
-    top: 32%;
-    left: 88.8%;
+    top: 84%;
+    left: 84.7%;
 }
 
 
 
 #btn_atracao10 {
-    top: 43%;
-    left: 7.5%;
+    top: 20%;
+    left: 6%;
 }
 
 #btn_atracao11 {
-    top: 58%;
-    left: 22.8%;
+    top: 76%;
+    left: 22.7%;
 }
 
 #btn_atracao12 {
-    top: 68%;
-    left: 17.5%;
+    top: 54.5%;
+    left: 50.55%;
 }
 
 #btn_atracao13 {
-    top: 70%;
-    left: 25.5%;
+    top: 79.5%;
+    left: 57.27%;
 }
 
 #btn_atracao14 {
-    top: 61%;
-    left: 52.5%;
+    top: 75.5%;
+    left: 89.3%;
 }
 
 
 
 #btn_atracao15 {
-    top: 68%;
-    left: 60.5%;
+    top: 32%;
+    left: 14.4%;
 }
 
 #btn_atracao16 {
-    top: 69%;
-    left: 68.5%;
+    top: 70%;
+    left: 18.4%;
 }
 
 #btn_atracao17 {
@@ -259,25 +252,22 @@ header h1 {
 }
 
 #btn_atracao19 {
-    top: 74%;
-    left: 90.2%;
+    top: 20%;
+    left: 86%;
 }
 
 #btn_atracao20 {
-    top: 83%;
-    left: 89.5%;
+    top: 58%;
+    left: 83%;
 }
 
 
-
-
-/* Kung Fu Panda */
 #btn_atracao21 {
-    top: 10.5%;
-    left: 42%;
+    top: 30%;
+    left: 1%;
 }
 
-/* Nerf Mania */
+
 #btn_atracao22 {
     top: 84%;
     left: 39.5%;
