@@ -433,7 +433,6 @@ function abrir_mapa() {
 
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const mapa = document.getElementById("div-mapa");
 
