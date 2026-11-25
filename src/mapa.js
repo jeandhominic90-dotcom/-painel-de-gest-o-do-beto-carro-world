@@ -4,7 +4,6 @@ const dadosParque = {
         codigo: "P",
         cor: "Roxo / Lilás",
         descricao: "Uma área temática de aventura e exploração, com atrações inspiradas no universo dos piratas.",
-        foto: "../img/ilha-dos-piratas.jpg",
         atracoes: [
             "Ponto Naval",
             "Barco Pirata",
@@ -18,7 +17,6 @@ const dadosParque = {
         codigo: "T",
         cor: "Rosa",
         descricao: "Uma área divertida com atrações para toda a família e especialmente para os pequenos.",
-        foto: "../img/triplikland.jpg",
         atracoes: [
             "Rede-gigante",
             "Xícaras Malucas",
@@ -32,7 +30,6 @@ const dadosParque = {
         codigo: "G",
         cor: "Amarelo",
         descricao: "Uma área temática com atrações, encontros com personagens, lojas e experiências para os visitantes.",
-        foto: "../img/vila-germanica.jpg",
         atracoes: [
             "Tigor Mountain",
             "Leander's Süß & Fritas",
@@ -50,7 +47,6 @@ const dadosParque = {
         codigo: "A",
         cor: "Azul",
         descricao: "Uma área de entrada e convivência, com atrações, eventos, esculturas e pontos de encontro.",
-        foto: "../img/avenida-das-nacoes.jpg",
         atracoes: [
             "Castelo das Nações",
             "Carrossel",
@@ -66,7 +62,6 @@ const dadosParque = {
         codigo: "C",
         cor: "Laranja",
         descricao: "Uma área inspirada no Velho Oeste, com atrações, shows, restaurantes e experiências temáticas.",
-        foto: "../img/cowboyland.jpg",
         atracoes: [
             "Teatro Acqua",
             "Encontro e Tomo do Betinho",
@@ -95,7 +90,6 @@ const dadosParque = {
         codigo: "N",
         cor: "Azul Escuro",
         descricao: "Uma área temática dedicada ao universo da diversão e da cultura nerd.",
-        foto: "../img/nerd-planet.jpg",
         atracoes: [
             "Spin Blast",
             "Nerd Shop",
@@ -111,7 +105,6 @@ const dadosParque = {
         codigo: "M",
         cor: "Laranja Escuro",
         descricao: "Uma área temática inspirada no mundo de Madagascar, com atrações e encontros com personagens.",
-        foto: "../img/madagascar.jpg",
         atracoes: [
             "Madagascar Circus Show",
             "Zaragosa's Hungry Wagon",
@@ -128,7 +121,6 @@ const dadosParque = {
         codigo: "R",
         cor: "Vermelho",
         descricao: "Uma área para quem gosta de emoção, aventura e atrações radicais.",
-        foto: "../img/aventura-radical.jpg",
         atracoes: [
             "Target Games",
             "Portal da Escuridão",
@@ -147,7 +139,6 @@ const dadosParque = {
         codigo: "H",
         cor: "Vermelho Claro / Vinho",
         descricao: "Uma área inspirada no universo Hot Wheels, com atrações e espetáculos cheios de velocidade.",
-        foto: "../img/hot-wheels.jpg",
         atracoes: [
             "Sobremesas",
             "Produtos Beto Carrero",
@@ -165,7 +156,6 @@ const dadosParque = {
         codigo: "F",
         cor: "Azul Claro",
         descricao: "Uma área temática de fantasia, passeios e aventuras para toda a família.",
-        foto: "../img/terra-da-fantasia.jpg",
         atracoes: [
             "Loja Bibi",
             "Estação João A. de Queiroz",
@@ -317,6 +307,8 @@ function clik_atracao(elementoOuValor) {
     }
 
     numero = String(numero ?? "").trim();
+    console.log( numero);
+    
 
     const codigoArea = botoesAreas[numero];
 
@@ -369,23 +361,7 @@ function clik_atracao(elementoOuValor) {
         });
     }
 
-    if (foto) {
-        foto.style.display = "none";
-        foto.removeAttribute("src");
-
-        if (area.foto) {
-            foto.onload = function() {
-                foto.style.display = "block";
-            };
-
-            foto.onerror = function() {
-                foto.style.display = "none";
-            };
-
-            foto.src = area.foto;
-            foto.alt = area.nome;
-        }
-    }
+   
 
     janela.style.display = "flex";
     janela.setAttribute("aria-hidden", "false");
@@ -404,6 +380,9 @@ function clik_atracao(elementoOuValor) {
     }
 
     console.log("Área selecionada:", area.nome);
+
+    console.log(elementoOuValor);
+    
 }
 
 
@@ -447,7 +426,7 @@ document.addEventListener("keydown", function(evento) {
 
 function abrir_mapa() {
     window.open(
-        "../img/mapa-beto-carrero.jpg",
+        "./mapa.html",
         "_blank"
     );
 }
@@ -461,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (mapa) {
         mapa.addEventListener("click", function(evento) {
 
-            // Não registra coordenadas quando clicar em um botão
+            
             if (
                 evento.target instanceof Element &&
                 evento.target.closest(".btn-atracoes")

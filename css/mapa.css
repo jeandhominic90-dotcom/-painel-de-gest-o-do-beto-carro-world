@@ -126,6 +126,8 @@ header h1 {
     width: 4.8%;
     aspect-ratio: 1 / 1;
 
+    
+
     border-radius: 50%;
     transform: translate(-50%, -50%);
 
@@ -137,7 +139,7 @@ header h1 {
 
     cursor: pointer;
 
-  
+  border: 3px solid #111;
 }
 
 .btn-atracoes:hover {
@@ -212,63 +214,58 @@ header h1 {
 #btn_atracao11 {
     top: 76%;
     left: 22.7%;
+    
 }
 
 #btn_atracao12 {
-    top: 54.5%;
-    left: 50.55%;
+    top: 140%;
+    left: 10%;
+
 }
 
 #btn_atracao13 {
-    top: 79.5%;
-    left: 57.27%;
+    top: 133%;
+    left: 25%;
+    
 }
 
 #btn_atracao14 {
-    top: 75.5%;
-    left: 89.3%;
+    top: 54%;
+    left: 50.3%;
+    
+    
 }
-
 
 
 #btn_atracao15 {
-    top: 32%;
-    left: 14.4%;
-}
+    top: -17%;
+    left: 57.2%;
 
+}
 #btn_atracao16 {
-    top: 70%;
-    left: 18.4%;
+    top: -21%;
+    left: 89.3%;
+   
 }
 
 #btn_atracao17 {
-    top: 35%;
-    left: 88.2%;
+    top: 22%;
+    left: 86.7%;
 }
 
 #btn_atracao18 {
-    top: 53%;
-    left: 92.5%;
-}
-
-#btn_atracao19 {
-    top: 20%;
-    left: 86%;
-}
-
-#btn_atracao20 {
     top: 58%;
     left: 83%;
 }
 
 
-#btn_atracao21 {
-    top: 30%;
-    left: 1%;
+#btn_atracao19 {
+    top: 31%;
+    left: 18.1%;
 }
 
 
-#btn_atracao22 {
+#btn_atracao20 {
     top: 84%;
     left: 39.5%;
 }
