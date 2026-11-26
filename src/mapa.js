@@ -170,6 +170,7 @@ const dadosParque = {
 
 
 const botoesAreas = {
+    0: "F",
     1: "G",
     2: "G",
     3: "G",
@@ -180,24 +181,25 @@ const botoesAreas = {
     8: "M",
     9: "H",
     10: "P",
-    11: "G",
-    12: "R",
+    11: "F",
+    12: "A",
     13: "A",
     14: "C",
-    15: "M",
-    16: "M",
+    15: "A",
+    16: "H",
     17: "H",
-    18: "H",
-    19: "H",
-    20: "R",
-    21: "G",
-    22: "N"
+    18: "R",
+    19: "A",
+    20: "N",
+    21: "F",
+    22: "N",
 };
 
 
 
 
 const nomesBotoes = {
+    0: "Terra da Fantasia",
     1: "Shrek",
     2: "Bob Esponja",
     3: "Ponto do mapa 3",
@@ -210,15 +212,15 @@ const nomesBotoes = {
     10: "Casa do Projeto Tamar",
     11: "Trolls",
     12: "Área Trolls",
-    13: "Megamente",
+    13: "Madagascar",
     14: "Cowboyland",
-    15: "Madagascar",
-    16: "Área Madagascar",
-    17: "Área Hot Wheels",
-    18: "Hot Wheels Epic Show",
-    19: "Hot Wheels Turbo Drive",
-    20: "FireWhip",
-    21: "Kung Fu Panda",
+    15: "Megamente",
+    16: "Hot Wheels Epic Show",
+    17: "Hot Wheels Turbo Drive",
+    18: "Aventura Radical",
+    19: "Kung Fu Panda",
+    20: "Nerd Planet",
+    21: "Terra da Fantasia",
     22: "Nerf Mania"
 };
 
@@ -331,9 +333,18 @@ function clik_atracao(elementoOuValor) {
     const cor = document.getElementById("cor-atracao");
     const descricao = document.getElementById("descricao-atracao");
     const lista = document.getElementById("lista-atracoes");
-    const foto = document.getElementById("foto-atracao");
 
     const nomeBotao = nomesBotoes[numero];
+
+    console.log(numero);
+    
+
+    console.log(titulo );
+    console.log(nomeBotao);
+    console.log(area);
+    
+    
+    
 
     if (titulo) {
         titulo.textContent = nomeBotao || area.nome;
@@ -426,7 +437,7 @@ document.addEventListener("keydown", function(evento) {
 
 function abrir_mapa() {
     window.open(
-        "./mapa.html",
+        "../mapa.html",
         "_blank"
     );
 }
