@@ -183,7 +183,7 @@ const botoesAreas = {
     10: "P",
     11: "F",
     12: "A",
-    13: "A",
+    13: "M",
     14: "C",
     15: "A",
     16: "H",
@@ -210,8 +210,8 @@ const nomesBotoes = {
     8: "Madagascar Crazy River Adventure",
     9: "Hot Wheels Big Drop",
     10: "Casa do Projeto Tamar",
-    11: "Trolls",
-    12: "Área Trolls",
+    11: "Área Trolls",
+    12: " Trolls",
     13: "Madagascar",
     14: "Cowboyland",
     15: "Megamente",
@@ -219,9 +219,8 @@ const nomesBotoes = {
     17: "Hot Wheels Turbo Drive",
     18: "Aventura Radical",
     19: "Kung Fu Panda",
-    20: "Nerd Planet",
+    20: "Nerf Mania",
     21: "Terra da Fantasia",
-    22: "Nerf Mania"
 };
 
 
@@ -476,3 +475,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+function clik_inportantes() {
+document.getElementById("janela-info").style.display = "flex";
+document.getElementById("janela-info").setAttribute("aria-hidden", "false");
+    
+}
+
+function fechar(){
+document.getElementById("janela-info").style.display = "none";
+document.getElementById("janela-info").setAttribute("aria-hidden", "true");    
+}

@@ -1,5 +1,5 @@
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-let clientes = JSON.parse(localStorage.getItem('clientes')) || []; 
+
 
 
 
